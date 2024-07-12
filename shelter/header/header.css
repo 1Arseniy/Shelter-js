@@ -1,0 +1,22 @@
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header-logo header-nav";
+}
+
+.header-logo {
+    font-family: Georgia;
+    font-weight: 400;
+    color: #F1CDB3;
+    grid-area: header-logo;
+}
+
+.header-logo-2 {
+    line-height: 35.2px;
+    font-size: 13px;
+    grid-area: header-logo;
+    display: flex;
+    align-items: center;
+}
