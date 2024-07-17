@@ -1,0 +1,14 @@
+@import url(./main/main.css);
+@import url(./header/header.css);
+
+.body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
