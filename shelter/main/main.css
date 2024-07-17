@@ -218,19 +218,51 @@
 }
 
 .section-5 {
+    column-gap: 20px;
     background: #F6F6F6;
     grid-area: section-5;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 4fr 1fr;
     grid-template-areas: 
-    "empty empty"
-    "dog text"
-    "empty empty";
+    "empty-1 empty-1"
+    "dog text-1"
+    "empty-2 empty-2";
 }
 
 .main-dog-2 {
     grid-area: dog;
     display: flex;
     justify-content: flex-end;
+}
+
+.main-block-4 {
+    grid-area: text-1;
+}
+
+.block-4-title {
+    font-size: 35px;
+    font-family: Georgia;
+    padding: 10px 0;
+}
+
+.block-4-text {
+    padding: 10px 0;
+}
+
+.main-block-5 {
+    background-color: #F1CDB3;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.block-5-img {
+    padding: 0 10px;
+}
+
+.block-5-numbers {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 10px;
 }
