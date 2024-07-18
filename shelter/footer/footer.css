@@ -1,0 +1,40 @@
+.footer {
+    background-image: url(../pictures/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: footer;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: 
+    "empty empty empty"
+    "phone location dog"
+    "empty-1 empty-1 empty-1";
+}
+
+.footer-block {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-block-title {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.footer-block-1 {
+    grid-area: location;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-block-2 {
+    grid-area: dog;
+    display: flex;
+    justify-content: center;
+}
