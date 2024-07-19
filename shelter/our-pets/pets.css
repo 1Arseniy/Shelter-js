@@ -39,3 +39,9 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.main-block-3 {
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+}
