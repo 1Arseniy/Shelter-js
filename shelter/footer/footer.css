@@ -34,8 +34,8 @@
 }
 
 .footer-block-2 {
+    margin-top: 40px;
     grid-area: dog;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
 }
