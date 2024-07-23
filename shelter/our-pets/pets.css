@@ -1,4 +1,5 @@
 @import url(../style.css);
+@import url(../footer/footer.css);
 
 .body {
     margin: 0;
@@ -8,11 +9,38 @@
     background: #FFFFFF;
 }
 
-.headrer-logo-a {
-    color: #545454
+.header-logo-a {
+    color: #545454;
+}
+
+.header-logo-2 {
+    color: #292929;
+}
+
+.header-nav-a {
+    color:#545454;
+    transition: color 300ms ease-in;
+}
+
+.header-nav-a:hover {
+    color: #292929;
+    transition: color 300ms ease-in;
+}
+
+.header-nav-our {
+    border-bottom: 3px solid #F1CDB3;
+    color: #292929;
+    transition: border-bottom-color 300ms ease-in;
+
+} 
+
+.header-nav-our:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    transition: border-bottom-color 300ms ease-in;    
 }
 
 .main {
+    row-gap: 40px;
     background: #F6F6F6;
     height: 1342px;
     display: grid;
@@ -25,11 +53,13 @@
 }
 
 .main-title {
+    letter-spacing: 0.5px;
+    color: #545454;
     font-size: 35px;
     text-align: center;
     grid-area: title;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -48,4 +78,56 @@
     grid-area: button;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+}
+
+.main-arrow {
+    padding: 0 10px;
+}
+
+.arrow-img-3 {
+    padding: 20px 13px;
+    border: #CDCDCD 2px solid;
+    border-radius: 100px;
+    transition: background-color 300ms ease-in;
+}
+
+.arrow-img-3:hover {
+    background-color: #FFFFFF;
+    transition: background-color 300ms ease-in;
+}
+
+.arrow-img-2 {
+    padding: 19px 20px;
+    border: #CDCDCD 2px solid;
+    border-radius: 100px;
+    transition: background-color 300ms ease-in;
+}
+
+.arrow-img-2:hover {
+    background-color: #FFFFFF;
+    transition: background-color 300ms ease-in;
+}
+
+
+.arrow-img-4 {
+    padding: 19px 20px;
+    border: #F1CDB3 2px solid;
+    border-radius: 100px;
+    background-color: #F1CDB3;
+}
+
+.arrow-img {
+    padding: 19px 20px;
+}
+
+.arrow-img-5 {
+    padding: 20px 13px;
+    border: #F1CDB3 2px solid;
+    border-radius: 100px;
+    transition: background-color 300ms ease-in;
+}
+
+.arrow-img-5:hover {
+    background-color: #F1CDB3;
 }
