@@ -199,6 +199,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: 500ms;
+}
+
+.main-block:hover {
+    transform: scale(1.1);
 }
 
 .main-section-3 {
@@ -216,12 +221,18 @@
 .button-3 {
     border-radius: 100px;
     padding: 10px 45px;
-    background: #F1CDB3;
+    background-color: #F1CDB3;
     border: #F1CDB3 3px solid;
     color: #292929;
     font-family: Georgia;
     font-weight: 400;
-    letter-spacing: 0,5px;
+    letter-spacing: 0.5px;
+    transition: background-color 200ms ease-in;
+}
+
+.button-3:hover {
+    background-color: rgba(255, 255, 255, 0);
+    transition:  background-color 300ms ease-in;
 }
 
 .main-arrow {
@@ -388,4 +399,5 @@
 
 .block-5-number-card-text {
     padding-right: 10px;
+    color: #545454;
 }

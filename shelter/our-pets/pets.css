@@ -30,13 +30,13 @@
 .header-nav-our {
     border-bottom: 3px solid #F1CDB3;
     color: #292929;
-    transition: border-bottom-color 300ms ease-in;
+    transition: border-bottom-color 200ms ease-in;
 
 } 
 
 .header-nav-our:hover {
     border-bottom: 3px solid rgba(255, 255, 255, 0);
-    transition: border-bottom-color 300ms ease-in;    
+    transition: border-bottom-color 200ms ease-in;    
 }
 
 .main {
