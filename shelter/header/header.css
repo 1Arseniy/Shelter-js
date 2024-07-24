@@ -25,6 +25,7 @@ a {
 
 .header-logo-a {
     color: #F1CDB3;
+    cursor: default;
 }
 
 .header-logo-1 {
@@ -63,6 +64,7 @@ a {
 }
 
 .header-nav-about {
+   cursor: default;
    color: #FAFAFA;
    border-bottom: 3px solid #F1CDB3;
    padding: 3px 0;

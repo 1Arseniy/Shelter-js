@@ -400,4 +400,5 @@
 .block-5-number-card-text {
     padding-right: 10px;
     color: #545454;
+    cursor: default;
 }

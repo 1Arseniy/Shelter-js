@@ -28,6 +28,7 @@
 }
 
 .header-nav-our {
+    cursor: default;
     border-bottom: 3px solid #F1CDB3;
     color: #292929;
     transition: border-bottom-color 200ms ease-in;
@@ -89,26 +90,13 @@
     padding: 20px 13px;
     border: #CDCDCD 2px solid;
     border-radius: 100px;
-    transition: background-color 300ms ease-in;
-}
-
-.arrow-img-3:hover {
-    background-color: #FFFFFF;
-    transition: background-color 300ms ease-in;
 }
 
 .arrow-img-2 {
     padding: 19px 20px;
     border: #CDCDCD 2px solid;
     border-radius: 100px;
-    transition: background-color 300ms ease-in;
 }
-
-.arrow-img-2:hover {
-    background-color: #FFFFFF;
-    transition: background-color 300ms ease-in;
-}
-
 
 .arrow-img-4 {
     padding: 19px 20px;

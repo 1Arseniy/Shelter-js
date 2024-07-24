@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    cursor: grabbing;
+}
+
 .body {
     height: 100vh;
     margin: 0;
