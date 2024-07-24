@@ -1,5 +1,14 @@
 @import url(./main/main.css);
 @import url(./header/header.css);
+@import url(./footer/footer.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    cursor: grabbing;
+}
 
 .body {
     height: 100vh;

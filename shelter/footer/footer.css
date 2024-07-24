@@ -1,0 +1,57 @@
+.footer {
+    font-family: Georgia;
+    letter-spacing: 1px;
+    background-image: url(../pictures/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: footer;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: 
+    "empty empty empty"
+    "phone location dog"
+    "empty-1 empty-1 empty-1";
+}
+
+.footer-block {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+
+.footer-block-img {
+    display: flex;
+    align-items: center;
+}
+
+.footer-block-img-link {
+    padding-right: 20px;
+}
+
+.block-link {
+    color: #F1CDB3;
+}
+
+.footer-block-title {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.footer-block-1 {
+    grid-area: location;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-block-2 {
+    margin-top: 40px;
+    grid-area: dog;
+    display: flex;
+    justify-content: center;
+}

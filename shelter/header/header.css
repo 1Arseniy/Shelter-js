@@ -1,12 +1,14 @@
 .header {
-    height: 90px;
     background-image: url(../pictures/start-screen-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: header;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
     grid-template-areas: 
-    "header-logo header-nav";
+    "header-empty header-empty"
+    "header-logo header-nav"
 }
 
 a {
@@ -14,29 +16,62 @@ a {
 }
 
 .header-logo {
-    margin: 30px 40px;
+    margin: 10px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    grid-area: header-logo;
+}
+
+.header-logo-a {
+    color: #F1CDB3;
+    cursor: default;
 }
 
 .header-logo-1 {
     margin:0;
     font-family: Georgia;
     font-weight: 400;
-    color: #F1CDB3;
-    grid-area: header-logo;
 }
 
 .header-logo-2 {
+    font-family: Arial;
     line-height: 35.2px;
     font-size: 13px;
-    grid-area: header-logo;
+    color: #FFFFFF;
+    margin-left: 3px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
 }
 
 .header-nav {
+    font-family: Arial;
+    margin-bottom: 10px;
     grid-area: header-nav;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.header-nav-a {
+   color: #CDCDCD;
+   transition: color 300ms ease-in;
+}
+
+.header-nav-a:hover {
+    color: #FAFAFA;
+    transition: color 300ms ease-in;
+}
+
+.header-nav-about {
+   cursor: default;
+   color: #FAFAFA;
+   border-bottom: 3px solid #F1CDB3;
+   padding: 3px 0;
+   transition: border-bottom-color 300ms ease-in;
+}
+
+.header-nav-about:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    transition: border-bottom-color 200ms ease-in;
 }

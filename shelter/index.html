@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link type="Image/x-icon" href="./favicon/favicon_(1).ico" rel="icon">
+    <script src="./index.js"></script>
     <title>Shelter</title>
 </head>
 <body class="body">
     <header class="header">
-     <div class="header-logo">
-       <a href="#"><h1 class="header-logo-1">Cozy House</h1></a>
-       <div class="header-logo-2">Shelter for pets in Boston</div>
-     </div>
+       <div class="header-logo">
+         <a href="#" class="header-logo-a"><h1 class="header-logo-1">Cozy House</h1></a>
+         <div class="header-logo-2">Shelter for pets in Boston</div>
+       </div>
        <nav class="header-nav">
-        <a href="#" class="header-nav-a">About the shelter</a>
-        <a href="#" class="header-nav-a">Our pets</a>
-        <a href="#" class="header-nav-a">Help the shelter</a>
-        <a href="#" class="header-nav-a">Contacts</a>
-       </nav> 
+        <a href="#" class="header-nav-about">About the shelter</a>
+        <a href="./our-pets/pets.html" class="header-nav-a">Our pets</a>
+        <a href="#help" class="header-nav-a">Help the shelter</a>
+        <a href="#footer" class="header-nav-a">Contacts</a>
+       </nav>
     </header>
     <main class="main">
       <div class="section-1">
-        <div class="text">
+       <div class="section-1-text">
             <div class="main-title">
               Not only people<br>need a house
             </div>
@@ -30,11 +32,11 @@
                He or she will love you more than anybody else<br>in the world, you will see!
             </div>
             <div class="main-button">
-              <button class="button">Make a friend</button>
+              <a class="button" href="#our-friends">Make a friend</a>
             </div>
-        </div>
+       </div>
         <div class="main-img">
-            <img src="../shelter/pictures/dog-header.jpg" alt="dog" class="main-dog">
+            <img src="./pictures/start-screen-puppy.png" alt="dog" class="main-dog">
         </div>
       </div>
       <div class="section-2">
@@ -46,47 +48,49 @@
               About the shelter<br>“Cozy House”
           </div>
           <pre></pre>
-          <div>
+          <div class="section-2-text">
             Currently we have 121 dogs and 342 cats on our hands and <br>statistics show that only 20% of them will find a family. 
             <br>The others will continue to live with us and will be waiting for a lucky<br> chance to become dearly loved.
           </div>
           <pre></pre>
-          <div>
+          <div class="section-2-text">
             We feed our wards with the best food and make sure that they<br> do not get sick, feel comfortable (including psychologically) and<br> well.
             We are supported by 87 volunteers and 28 employees of<br> various skill levels. About 12% of the animals are taken by the<br> shelter staff. 
             Taking care of the animals, they become attached<br> to the pets and would hardly ever leave them alone.
           </div>
         </div>
       </div>
-      <div class="section-3">
+      <div class="section-3" id="our-friends">
               <div class="main-title-3">
                  Our friends who<br>are looking for a house
               </div>
           <div class="main-blocks">
               <div class="main-block">
-                 <img src="./pictures/pets-katrine-main.png" alt="cat" class="">
-                 <div class="main-word">Katrine </div>
-                 <div class="main-button-2">
-                     <button class="button-2">Learn more</button>
-                 </div>
+                 <img src="./pictures/pets-katrine-main.png" alt="cat">
+                 <div class="main-word">Katrine</div>
+                <div class="main-button-2">
+                  <button class="button-learn">Learn more</button>
+               </div>
               </div>
               <div class="main-block">
-                 <img src="./pictures/pets-jennifer-main.png" alt="dog" class="">
-                 <div class="main-word">Katrine </div>
-                 <div class="main-button-2">
-                     <button class="button-2">Learn more</button>
-                 </div>
+                 <img src="./pictures/pets-jennifer-main.png" alt="dog">
+                 <div class="main-word">Jennifer</div>
+                <div class="main-button-2">
+                  <button class="button-learn">Learn more</button>
+               </div>
               </div>
               <div class="main-block">
-                 <img src="./pictures/pets-woody-main.png" alt="dog" class="">
-                 <div class="main-word">Katrine </div>
-                 <div class="main-button-2">
-                     <button class="button-2">Learn more</button>
-                 </div>
+                 <img src="./pictures/pets-woody-main.png" alt="dog">
+                 <div class="main-word">Woody</div>
+                <div class="main-button-2">
+                  <button class="button-learn">Learn more</button>
+               </div>
               </div>
           </div>
-          <div class="main-button-3">
-            <button class="button-3">Get to know the rest</button>
+          <div class="main-section-3">
+              <div class="main-button-3">
+                <a class="button-3" href="./our-pets/pets.html#our-friends">Get to know the rest</a>
+              </div>
           </div>
           <span class="main-arrow">
               <img src="./pictures/Arrow-main.svg" alt="arrow" class="arrow-img">
@@ -95,7 +99,7 @@
               <img src="./pictures/Arrow-main-2.svg" alt="arrow" class="arrow-img">
           </span>
       </div>
-      <div class="section-4">
+      <div class="section-4" id="help">
           <div class="main-title-4">
             How you can help<br>our shelter
           </div>
@@ -116,24 +120,71 @@
             <div class="img-png"><img src="./pictures/shampoos-main.png" alt="pets food"></div>
           </div>
         </div>
-        <div class="main-block-3">
-          <div class="text-png">Vitamins
-            <div class="img-png"><img src="./pictures/vitamins-main.png" alt="pets food"></div>
+       <div class="main-grid">
+         <div class="main-block-3">
+           <div class="text-png">Vitamins
+             <div class="img-png"><img src="./pictures/vitamins-main.png" alt="pets food"></div>
+           </div>
+           <div class="text-png">Medicines
+             <div class="img-png"><img src="./pictures/medicines-main.png" alt="pets food"></div>
+           </div>
+           <div class="text-png">Collars / leashes
+             <div class="img-png"><img src="./pictures/collars-or-leashes-main.png" alt="pets food"></div>
+           </div>
+           <div class="text-png">Sleeping areas
+             <div class="img-png"><img src="./pictures/sleeping-area-main.png" alt="pets food"></div>
+           </div>
+         </div>
+       </div>
+      </div>
+      <div class="section-5">
+           <div class="main-dog-2"><img src="./pictures/donation-dog.png" alt="dog"></div>
+          <div class="main-block-4-grid">
+            <div class="main-block-4">
+               <div class="block-4-title">You can also<br>make a donation</div>
+               <div class="block-4-text">Name of the bank / Type of bank account</div>
+               <div class="main-block-5">
+                  <div class="block-5-number-card"><img src="./pictures/credit-card.svg" alt="card" class="block-5-img">
+                    <a href="#1" class="block-5-number-card-text">8380 2880 8028 8791 7435</a>
+                  </div>
+               </div>
+               <div class="block-5-text">
+                 Legal information and lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. 
+                 Maecenas a ipsum at libero sagittis dignissim sed ac<br> diam. Praesent ultrices maximus tortor et vulputate. 
+                 Interdum et<br> malesuada fames ac ante ipsum primis in faucibus.
+               </div>
+            <div>
           </div>
-          <div class="text-png">Medicines
-            <div class="img-png"><img src="./pictures/medicines-main.png" alt="pets food"></div>
-          </div>
-          <div class="text-png">Collars / leashes
-            <div class="img-png"><img src="./pictures/collars-or-leashes-main.png" alt="pets food"></div>
-          </div>
-          <div class="text-png">Sleeping areas
-            <div class="img-png"><img src="./pictures/sleeping-area-main.png" alt="pets food"></div>
-          </div>
-        </div>
-        </div>
-        <div class="section-5">
-             <div class="main-dog-2"><img src="./pictures/donation-dog-main.jpg" alt="dog"></div>
-        </div>
+      </div>
+     </div>
+     </div>
     </main>
+    <footer class="footer" id="footer">
+        <div class="footer-block">
+         <div class="footer-block-title">For questions<br> and suggestions</div>
+         <div class="footer-block-img">
+          <img src="./pictures/mail.svg" alt="email" class="footer-block-img-link">
+          <a href="mailto:email@shelter.com" class="block-link">email@shelter.com</a>
+         </div>
+         <div class="footer-block-img">
+          <img src="./pictures/phone.svg" alt="phone" class="footer-block-img-link">
+          <a href="tel:+136745677554" class="block-link">+13 674 567 75 54</a>
+         </div>
+       </div>
+       <div class="footer-block-1">
+        <div class="footer-block-title">We are waiting<br>for your visit</div>
+        <div class="footer-block-img">
+          <img src="./pictures/pin.svg" alt="map" class="footer-block-img-link">
+          <a href="./google-map/map.html" class="block-link">1 Central Street, Boston<br> (entrance from the store)</a>
+        </div>
+        <div class="footer-block-img">
+          <img src="./pictures/pin.svg" alt="map" class="footer-block-img-link">
+          <a href="./google-map/map.html" class="block-link">18 South Park, London</a>
+        </div>
+       </div>
+       <div class="footer-block-2">
+            <img src="./pictures/footer-puppy-footer.png" alt="dog">
+       </div>
+    </footer>
 </body>
 </html>
