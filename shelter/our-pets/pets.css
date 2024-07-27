@@ -18,13 +18,11 @@
 }
 
 .header-nav-a {
-    border-bottom: 3px solid rgba(255, 255, 255, 0);
     color:#545454;
-    transition: color 300ms ease-in,border-bottom-color 3px solid #F1CDB3;
+    transition: color 300ms ease-in,
 }
 
 .header-nav-a:hover {
-    border-bottom: 3px solid #F1CDB3;
     color: #292929;
 }
 
