@@ -18,27 +18,21 @@
 }
 
 .header-nav-a {
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
     color:#545454;
-    transition: color 300ms ease-in;
+    transition: color 300ms ease-in,border-bottom-color 3px solid #F1CDB3;
 }
 
 .header-nav-a:hover {
+    border-bottom: 3px solid #F1CDB3;
     color: #292929;
-    transition: color 300ms ease-in;
 }
 
 .header-nav-our {
     cursor: default;
     border-bottom: 3px solid #F1CDB3;
     color: #292929;
-    transition: border-bottom-color 200ms ease-in;
-
 } 
-
-.header-nav-our:hover {
-    border-bottom: 3px solid rgba(255, 255, 255, 0);
-    transition: border-bottom-color 200ms ease-in;    
-}
 
 .main {
     row-gap: 40px;
