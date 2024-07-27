@@ -54,13 +54,11 @@ a {
 }
 
 .header-nav-a {
-   border-bottom: 3px solid rgba(255, 255, 255, 0);
    color: #CDCDCD;
-   transition: color 300ms ease-in, border-bottom-color 300ms ease-in;
+   transition: color 300ms ease-in;
 }
 
 .header-nav-a:hover {
-    border-bottom: 3px solid #F1CDB3;
     color: #FAFAFA;
 }
 

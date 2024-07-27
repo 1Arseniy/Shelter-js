@@ -165,6 +165,10 @@
     border-radius: 6px;
 }
 
+.main-block:hover .button-learn {
+    background-color: #FDDCC4;
+}
+
 .main-word {
     display: flex;
     justify-content: center;
@@ -192,7 +196,6 @@
 .button-learn:hover {
     background-color: #FDDCC4;
     transition: background-color 200ms ease-in-out
-
 }
 
 .main-block {
