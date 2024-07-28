@@ -7,7 +7,7 @@ html {
 }
 
 a {
-    cursor: grabbing;
+    cursor: pointer;
 }
 
 .body {

@@ -79,12 +79,14 @@
 }
 
 .arrow-img-3 {
+    cursor: not-allowed;
     padding: 20px 13px;
     border: #CDCDCD 2px solid;
     border-radius: 100px;
 }
 
 .arrow-img-2 {
+    cursor: not-allowed;
     padding: 19px 20px;
     border: #CDCDCD 2px solid;
     border-radius: 100px;
@@ -102,6 +104,7 @@
 }
 
 .arrow-img-5 {
+    cursor: pointer;
     padding: 20px 13px;
     border: #F1CDB3 2px solid;
     border-radius: 100px;
