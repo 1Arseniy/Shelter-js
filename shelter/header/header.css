@@ -68,3 +68,20 @@ a {
    border-bottom: 3px solid #F1CDB3;
    padding: 3px 0;
 }
+
+@media (max-width: 768px) {
+     .header {
+        grid-template-columns: 0.5fr 2fr;
+        grid-template-areas: 
+        "media-header-logo media-header-nav";
+     }
+     
+     .header-logo {
+        grid-area: media-header-logo;
+
+     }
+
+     .header-nav {
+        grid-area: media-header-nav
+     }
+}
