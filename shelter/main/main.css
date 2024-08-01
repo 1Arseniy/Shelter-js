@@ -2,7 +2,7 @@
     grid-area: main;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 0.3fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr 0.8fr 0.5fr min-content 0.5fr;
     grid-template-areas: 
     "section-1"
     "section-2"
@@ -17,44 +17,44 @@
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: section-1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "text-button img"
-    ;
+}
+
+.section-1-flex {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .section-1-text {
-    grid-area: text-button;
-    display: grid;
-    grid-template-rows: 2fr 1fr 2fr;
-    grid-template-columns: 0.6fr 10fr;
-    grid-template-areas: 
-    "section-empty section-title"
-    "section-empty section-p"
-    "section-empty section-button";
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-title {
+    margin-bottom: 50px;
     color: #FFFFFF;
     grid-area: section-title;
     font-size: 44px;
     font-weight: 400;
     font-family: Georgia;
     display: flex;
-    align-items: flex-end;
 }
 
 .main-text {
+    padding-bottom: 50px;
     color: #CDCDCD;
     font-family: Arial;
     font-size: 15px;
-    grid-area: section-p;
     display: flex;
     align-items: center;
 }
 
 .main-button {
+    margin-bottom: 50px;
     color: #292929;
     font-family: Georgia;
     font-size: 17px;
@@ -89,12 +89,15 @@
 
 
 .section-2 {
-    grid-area: section-2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "img text"
-    ;
+    display: flex;
+    justify-content: center;
+}
+
+.section-2-flex {
+    margin: 100px 180px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main-img-2 {
@@ -108,6 +111,7 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   margin-left: 140px;
 }
 
 .main-title-2 {
@@ -136,6 +140,7 @@
     "arrow title arrow-2"
     "arrow blocks arrow-2"
     "arrow button-3 arrow-2";
+
 }
 
 .main-title-3 {
@@ -270,32 +275,52 @@
 .section-4 {
     background: #FFFFFF;
     grid-area: section-4;
-    display: grid;
-    grid-template-rows: 1fr 3fr 3fr;
-    grid-template-areas: 
-    "empty"
-    "img-1"
-    "img-2";
+}
+
+.section-4-flex {
+    margin: 100px;
 }
 
 .main-block-2 {
     grid-area: img-1;
+    display: flex ;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main-block-2-png {
     display: flex;
+    justify-content: space-between;
+}
+
+.main-block-2-png-2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 30px;
+}
+
+.main-block-2-flex {
+    display: flex;
+    align-items: flex-end;
     justify-content: space-around;
 }
 
+
 .main-title-4 {
-    grid-area: img-1;
+    margin-bottom: 100px;
+    grid-area: title-4;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     font-size: 35px;
     text-align: center;
     color: #545454;
     font-family: Georgia;
-    letter-spacing: 0,5px;
+    letter-spacing: 0.5px;
 }
 
 .text-png {
+    margin: 30px;
     display: flex;
     flex-direction: column-reverse; 
     text-align: center;
@@ -329,16 +354,21 @@
     column-gap: 30px;
     background: #F6F6F6;
     grid-area: section-5;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-template-areas: 
-    "empty-1 empty-1"
-    "dog text-1"
-    "empty-2 empty-2";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.section-5-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0;
+    border: 1px solid green;
 }
 
 .main-dog-2 {
+    margin-right: 20px;
     grid-area: dog;
     display: flex;
     justify-content: flex-end;
@@ -347,13 +377,11 @@
 
 .main-block-4-grid {
     grid-area: text-1;
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    grid-template-areas: 
-    "block-4-button block-4-empty";
+   
 }
 
 .main-block-4 {
+    width: 500px;
     margin-bottom: 5px;
     grid-area: block-4-button;
     display: flex;
@@ -372,6 +400,7 @@
 }
 
 .main-block-5 {
+    padding: 10px 0;
     background-color: #F1CDB3;
     padding: 7px 5px;
     border-radius: 9px;
@@ -384,10 +413,12 @@
 }
 
 .block-5-text {
+    padding-top: 20px;
     color: #B2B2B2;
     font-family: Arial;
     font-size: 12px;
     letter-spacing: 0.5px;
+    line-height: 18px;
 }
 
 .block-5-numbers {
@@ -408,57 +439,38 @@
     cursor: default;
 }
 
-@media (max-width: 936px) {
-
-    .section-1 {
-       grid-template-rows: 0.8fr 1fr;
-       grid-template-columns: 0.5fr 3fr;
-       column-gap: 30px;
-       grid-template-areas: 
-       "media-section-1-empty media-section-1"
-       "media-section-2-empty media-section-2";
+@media (max-width: 1270px) {
+    .text-2 {
+        align-items: flex-start;
     }
 
-    .section-1-text {
-        grid-area: media-section-1;
-        row-gap: 50px;
-    }
-
-    .main-img {
-        grid-area: media-section-2;
-    }
-
-    .section-2 {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 5fr;
-        row-gap: 70px;
-        grid-template-areas: 
-        "media-section-3-empty media-section-3"
-        "media-section-4-empty media-section-4";
-    }
+    .section-2-flex {
+        flex-direction: column-reverse;
+    }  
 
     .main-img-2 {
-        grid-area: media-section-4;
-        justify-content: flex-start;
+        margin-top: 50px;
+        margin-left: 50px;
     }
+}
 
-    .text-2 {
-        grid-area: media-section-3;
-    }
+@media (max-width: 1250px) {
+    
 /* section-3 */
     .main-block-woody {
         display: none;
     }
+    
+    .section-5-flex  {
+    flex-direction: column-reverse;
+   }
+    
+   .main-block-4 {
+    margin-left: 100px;
+    justify-content: center;
+   }
 
-    .section-4 {
-       grid-area: section-4;
-       grid-template-rows: 0.5fr 1fr 1fr 1fr;
-       grid-template-columns: 0.5 5fr;
-       grid-template-areas:
-       "media-section-5-empty media-title-1" 
-       "media-section-5-empty media-section-4-png-1"
-       "media-section-5-empty media-section-4-png-2"
-       "media-section-5-empty media-section-4-png-3";
-    }
-
+   .main-dog-2 {
+    margin-top: 50px;
+   }
 }

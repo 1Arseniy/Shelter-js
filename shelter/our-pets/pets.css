@@ -27,6 +27,7 @@
 }
 
 .header-nav-our {
+    margin: 0 20px;
     cursor: default;
     border-bottom: 3px solid #F1CDB3;
     color: #292929;

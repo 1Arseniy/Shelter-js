@@ -3,12 +3,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr;
-    grid-template-areas: 
-    "header-empty header-empty"
-    "header-logo header-nav"
+}
+
+.header-flex {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 a {
@@ -16,11 +17,13 @@ a {
 }
 
 .header-logo {
-    margin: 10px 40px;
+    margin-left: 40px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     grid-area: header-logo;
+
 }
 
 .header-logo-a {
@@ -45,15 +48,14 @@ a {
 }
 
 .header-nav {
+    margin-right: 20px;
     font-family: Arial;
-    margin-bottom: 10px;
-    grid-area: header-nav;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .header-nav-a {
+   padding: 0 20px ;
    color: #CDCDCD;
    transition: color 300ms ease-in;
 }
@@ -63,25 +65,17 @@ a {
 }
 
 .header-nav-about {
+   margin: 0 20px ;
    cursor: default;
    color: #FAFAFA;
    border-bottom: 3px solid #F1CDB3;
    padding: 3px 0;
 }
 
-@media (max-width: 768px) {
-     .header {
-        grid-template-columns: 0.5fr 2fr;
-        grid-template-areas: 
-        "media-header-logo media-header-nav";
-     }
-     
-     .header-logo {
-        grid-area: media-header-logo;
-
-     }
-
-     .header-nav {
-        grid-area: media-header-nav
-     }
+@media (max-width: 1050px) {
+   
+    .main-button {
+        align-self: center;
+    }
+    
 }
