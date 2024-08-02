@@ -1,8 +1,7 @@
 .main {
     grid-area: main;
-    height: 100%;
     display: grid;
-    grid-template-rows: 1fr 0.8fr 0.5fr min-content 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas: 
     "section-1"
     "section-2"
@@ -25,6 +24,7 @@
     margin-right: 50px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .section-1-text {
