@@ -14,7 +14,7 @@ a {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content auto min-content;
+    grid-template-rows: auto auto min-content;
     grid-template-areas: 
     "header"
     "main"
