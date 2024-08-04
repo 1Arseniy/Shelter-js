@@ -1,86 +1,13 @@
 .main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     "section-2"
     "section-3"
     "section-4"
     "section-5"
     ;
-}
-
-.section-1 {
-    grid-area: not-only;
-}
-
-.section-1-flex {
-    margin-top: 100px;
-    margin-left: 40px;
-    margin-right: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.section-1-text {
-    margin-bottom: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.main-title {
-    margin-bottom: 50px;
-    color: #FFFFFF;
-    grid-area: section-title;
-    font-size: 44px;
-    font-weight: 400;
-    font-family: Georgia;
-    display: flex;
-}
-
-.main-text {
-    padding-bottom: 50px;
-    color: #CDCDCD;
-    font-family: Arial;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.main-button {
-    margin-bottom: 50px;
-    color: #292929;
-    font-family: Georgia;
-    font-size: 17px;
-    grid-area: section-button;
-}
-
-.button {
-    color: #292929;
-    font-family: Georgia;
-    font-size: 17px;
-    background-color: #F1CDB3;
-    border:#5B483A;
-    grid-area: text-button;
-    border-radius: 100px;
-    padding: 15px 45px;
-    transition: background-color 200ms ease-in;
-}
-
-.button:hover {
-    background-color: #FDDCC4;
-    transition: background-color 200ms ease-in;
-}
-
-.main-img {
-    display:flex;
-    align-items: flex-end;
-}
-
-.main-dog {
-    grid-area: img;
 }
 
 .section-2 {
@@ -185,7 +112,7 @@
 
 .button-learn {
     border-radius: 100px;
-    padding: 10px 45px;
+    padding: 14px 50px;
     border: #FDDCC4 3px solid;
     color: #292929;
     font-family: Georgia;
@@ -211,20 +138,20 @@
 }
 
 .main-section-3 {
+    grid-area: button-3;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-button-3 {
-    grid-area: button-3;
     display: flex;
     align-items: center;
 }
 
 .button-3 {
     border-radius: 100px;
-    padding: 10px 45px;
+    padding: 14px 53px;
     background-color: #F1CDB3;
     border: #F1CDB3 3px solid;
     color: #292929;
@@ -286,9 +213,11 @@
 .main-block-2-png {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-block-2-png-2 {
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
     margin: 30px 30px;
@@ -315,7 +244,7 @@
 }
 
 .text-png {
-    margin: 30px;
+    margin: 25px;
     display: flex;
     flex-direction: column-reverse; 
     text-align: center;
@@ -324,17 +253,13 @@
     font-family: Georgia;
 }
 
+.text-png-2 {
+    display: none;
+}
+
 .img-png {
     grid-area: img-1;
     padding: 20px 0;
-}
-
-.main-grid {
-    grid-area: img-2;
-    display: grid;
-    grid-template-columns: 0.5fr 5fr 0.5fr;
-    grid-template-areas: 
-    "section-4-empty section-4 section-4-empty-1";
 }
 
 .main-block-3 {
@@ -370,10 +295,6 @@
     align-items: center;
 }
 
-.main-block-4-grid {
-    grid-area: text-1;
-   
-}
 
 .main-block-4 {
     width: 500px;
@@ -436,7 +357,7 @@
 
 @media (max-width: 1270px) {
     .text-2 {
-        align-items: flex-start;
+        margin: 0;
     }
 
     .section-2-flex {
@@ -449,9 +370,13 @@
     }
 }
 
+@media (max-width: 850px) {
+    .section-2-flex {
+        margin: 100px 100px
+    }
+}
+
 @media (max-width: 1250px) {
-    
-/* section-3 */
     .main-block-woody {
         display: none;
     }
@@ -475,5 +400,42 @@
     .main-dog {
         height: 593px;
         width: 569px;
+    }
+}
+
+@media (max-width: 840px) {
+    
+    .text-png-3 {
+       display: none;
+
+    }
+    
+    .text-png-2 {
+        display: flex;
+        flex-direction: column-reverse; 
+        text-align: center;
+        color: #545454;
+        font-size: 20px;
+        font-family: Georgia;
+    }
+
+    .main-block-2-png-2 {
+        margin: 0;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 740px) {
+    .main-block-jennifer {
+        display: none;
+    }
+
+    .main-arrow {
+        grid-area: button-3;
+    }
+
+    .main-arrow-2 {
+        grid-area: button-3;
     }
 }
