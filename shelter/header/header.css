@@ -221,3 +221,26 @@ a {
 
  }
 
+ @media (max-width: 700px) {
+    .main-dog {
+        height: 271px;
+        width: 260px;
+    }
+
+    .main-img {
+        justify-content: center;
+    }
+
+    .main-text {
+        text-align: center;
+    }
+
+    .section-1-flex {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .main-title {
+        font-size: 33px;
+    }
+ }

@@ -79,4 +79,12 @@
     .footer-block-img {
         margin-bottom: 30px;
     }
+
+}
+
+@media (max-width: 630px) {
+    .footer-img {
+        height: 270px;
+        width: 260px;
+    }
 }

@@ -148,3 +148,31 @@
         display: none;
     }    
 }
+
+@media (max-width: 700px) {
+    
+    .main-title {
+        font-size: 25px;
+    }
+ 
+    .main-block-sophia {
+        display: none;
+    }
+
+    .main-block-timmy {
+        display: none;
+    }
+
+    .main-block-charly {
+        display: none;
+    }
+    
+    .footer-block-title {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .main-flex {
+        margin: 50px 15px;
+    }
+}

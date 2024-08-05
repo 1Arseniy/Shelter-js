@@ -55,18 +55,17 @@
 .section-3 {
     background: #F6F6F6;
     grid-area: section-3;
-    display: grid;
-    grid-template-rows: 2fr 5fr 2fr;
-    grid-template-columns: 0.5fr 5fr 0.5fr;
-    grid-template-areas: 
-    "arrow title arrow-2"
-    "arrow blocks arrow-2"
-    "arrow button-3 arrow-2";
+    height: 100%;
+}
 
+.main-section-3-flex {
+    margin: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .main-title-3 {
-    grid-area: title;
     text-align: center;
     font-family: Georgia;
     font-size: 35px;
@@ -77,12 +76,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .main-blocks {
-    grid-area: blocks;
     display: flex;
-    align-items: flex-end;
     justify-content: space-around;
 }
 
@@ -138,7 +136,7 @@
 }
 
 .main-section-3 {
-    grid-area: button-3;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,19 +164,24 @@
     transition:  background-color 300ms ease-in;
 }
 
-.main-arrow {
+.main-arrow-3 {
     display: flex;
-    grid-area: arrow;
     align-items: center;
-    justify-content: flex-end;
 }
 
 
 .main-arrow-2 {
-    grid-area: arrow-2;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-end;
+}
+
+.main-arrow-media {
+    display: none;
+}
+
+.main-arrow-media-2 {
+    display: none;
 }
 
 .arrow-img {
@@ -431,11 +434,74 @@
         display: none;
     }
 
-    .main-arrow {
-        grid-area: button-3;
+    .main-arrow-3 {
+        display: none;
+    }
+    
+    .main-arrow-2 {
+        display: none;
+    }
+    
+    .main-section-3 {
+        margin: 0;
+        flex-direction: column;
     }
 
-    .main-arrow-2 {
-        grid-area: button-3;
+    .main-arrow-media {
+        display: flex;
+        padding-right: 40px;
     }
+    
+    .main-arrow-media-2 {
+        display: flex;
+        padding-left: 40px;
+    }
+
+    .arrow-container {
+        display: flex;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+    .section-2-flex {
+        margin: 100px 0;
+    }
+
+    .main-dog-cat {
+        height: 350px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .main-dog-2 {
+       justify-content: center;
+    }
+
+    .main-dog-2-media {
+        width: 260px;
+        height: 135px; 
+    }
+
+    .section-4-flex {
+        margin: 50px;
+    }
+
+    .main-title-2 {
+        font-size: 25px;
+    }
+
+    .main-title-3 {
+        font-size: 25px;
+    }
+
+    .main-title-4 {
+        font-size: 25px;
+    }
+
 }
