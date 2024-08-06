@@ -24,7 +24,7 @@ a {
 
 .header-logo {
     margin-left: 40px;
-    width: 200px;
+   max-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;

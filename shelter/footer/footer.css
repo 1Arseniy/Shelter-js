@@ -87,4 +87,11 @@
         height: 270px;
         width: 260px;
     }
+
+    .footer-block-title {
+        font-size: 25px;
+        text-align: center;
+    }
+
 }
+
