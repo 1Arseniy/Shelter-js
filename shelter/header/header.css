@@ -1,14 +1,21 @@
 .header {
+    grid-area: header;
     background-image: url(../pictures/start-screen-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr;
+    grid-template-rows: min-content auto;
     grid-template-areas: 
-    "header-empty header-empty"
-    "header-logo header-nav"
+    "header-nav"
+    "not-only";
+}
+
+.header-flex {
+    grid-area: header-nav;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 a {
@@ -16,11 +23,13 @@ a {
 }
 
 .header-logo {
-    margin: 10px 40px;
+    margin-left: 40px;
+    max-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     grid-area: header-logo;
+
 }
 
 .header-logo-a {
@@ -44,16 +53,26 @@ a {
     letter-spacing: 0.7px;
 }
 
+.header-burger {
+    display: none;
+}
+
+.burger-menu {
+   border-bottom: 2px solid #F1CDB3;
+   width: 30px;
+   padding: 4px 0;
+}
+
 .header-nav {
+    font-size: 15px;
+    margin-right: 20px;
     font-family: Arial;
-    margin-bottom: 10px;
-    grid-area: header-nav;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .header-nav-a {
+   padding: 0 20px ;
    color: #CDCDCD;
    transition: color 300ms ease-in;
 }
@@ -63,8 +82,176 @@ a {
 }
 
 .header-nav-about {
+   margin: 0 20px ;
    cursor: default;
    color: #FAFAFA;
    border-bottom: 3px solid #F1CDB3;
    padding: 3px 0;
 }
+
+.section-1 {
+    grid-area: not-only;
+}
+
+.section-1-flex {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-1-text {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    grid-area: section-title;
+    font-size: 44px;
+    font-weight: 400;
+    font-family: Georgia;
+    display: flex;
+}
+
+.main-text {
+    padding-bottom: 50px;
+    color: #CDCDCD;
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.main-button {
+    margin-bottom: 50px;
+    color: #292929;
+    font-family: Georgia;
+    font-size: 17px;
+    grid-area: section-button;
+}
+
+.button {
+    color: #292929;
+    font-family: Georgia;
+    font-size: 17px;
+    background-color: #F1CDB3;
+    border:#5B483A;
+    grid-area: text-button;
+    border-radius: 100px;
+    padding: 15px 50px;
+    transition: background-color 200ms ease-in;
+}
+
+.button:hover {
+    background-color: #FDDCC4;
+    transition: background-color 200ms ease-in;
+}
+
+.main-img {
+    display:flex;
+}
+
+
+@media (max-width: 1279px) and (min-width: 767px) {
+    .header-nav {
+        font-size: 13px;
+    }
+
+    .main-dog {
+        height: 593px;
+        width: 569px;
+    }
+
+    .section-1-text {
+        width: 100%;
+      }
+   
+      .main-title {
+       align-self: center;
+      }
+   
+      .main-text {
+       align-self: flex-end;
+       margin-right: 25px;
+      }
+  
+      
+      .main-button {
+          align-self: center;
+          margin-left: 25px;
+      }
+  
+      .main-img {
+          width: 100%;
+          justify-content: flex-end;
+      }
+  
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .section-1-text {
+        width: 100%;
+      }
+   
+      .main-title {
+       align-self: center;
+      }
+   
+      .main-button {
+          align-self: center;
+          margin-left: 25px;
+      }
+  
+      .main-img {
+          width: 100%;
+          justify-content: flex-end;
+      }
+  
+    .header-nav {
+        display: none;
+    }
+
+    .header-burger {
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .burger-menu {
+       border-bottom: 2px solid #F1CDB3;
+       width: 30px;
+       padding: 4px 0;
+    }
+
+    .main-dog {
+        height: 271px;
+        width: 260px;
+    }
+
+    .main-img {
+        justify-content: center;
+    }
+
+    .main-text {
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .section-1-flex {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .main-title {
+        font-size: 33px;
+        text-align: center;
+    }
+}
+
