@@ -68,7 +68,7 @@
     font-family: Georgia;
     font-size: 35px;
     color: #545454;
-    line-height: 45.5px;
+    line-height: 32.5px;
     font-weight: 400;
     letter-spacing: 2px;
     display: flex;
@@ -407,7 +407,7 @@
     }
 
     .text-2 {
-        margin: 0;
+        margin: 0 15px;
     }
 
     .section-2-flex {
@@ -475,6 +475,8 @@
  
      .main-title-2 {
          font-size: 25px;
+         align-self: center;
+         text-align: center;
      }
  
      .main-title-3 {
@@ -508,5 +510,13 @@
 
    .main-section-3-flex {
     margin: 50px 0;
+   }
+
+   .text-br {
+    display: none;
+   } 
+
+   .block-5-text {
+    margin: 0 10px;
    }
 }

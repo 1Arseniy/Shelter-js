@@ -241,6 +241,7 @@ a {
 
     .main-text {
         text-align: center;
+        margin: 0 10px;
     }
 
     .section-1-flex {
@@ -250,6 +251,7 @@ a {
     
     .main-title {
         font-size: 33px;
+        text-align: center;
     }
 }
 
