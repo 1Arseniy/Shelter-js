@@ -130,7 +130,7 @@
 }
 
 
-@media (max-width: 1279px) and (min-width: 677px) {
+@media (max-width: 1279px) and (min-width: 767px) {
     .main-blocks {
         margin-bottom: 0;
     }
@@ -148,7 +148,11 @@
     }    
 }
 
-@media (max-width: 677px) and (min-width: 320px) {
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .arrow-img-5:hover {
+        background-color: #F6F6F6;
+    }
 
     .main-blocks {
         margin-bottom: 0;
