@@ -195,6 +195,10 @@ a {
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
+    .button:hover {
+        background-color: #F1CDB3;
+    }
+
     .section-1-text {
         width: 100%;
       }
