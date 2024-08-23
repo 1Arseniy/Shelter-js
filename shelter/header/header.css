@@ -221,6 +221,11 @@ a {
         display: none;
     }
 
+    .header-nav {
+        right: 320px;
+        transition: right 300ms ease-in;
+    }
+
     .header-burger {
         margin-right: 20px;
         display: flex;
