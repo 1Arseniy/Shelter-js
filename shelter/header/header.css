@@ -212,47 +212,35 @@ a {
           margin-left: 25px;
       }
   
-      .main-img {
-          width: 100%;
-          justify-content: flex-end;
-      }
+    .main-img {
+        width: 100%;
+        justify-content: flex-end;
+    }
   
-    .header-nav {
-        display: none;
-    }
-
-    .header-nav {
-        right: 320px;
-        transition: right 300ms ease-in;
-    }
-
     .header-burger {
         margin-right: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        z-index: 3;
+        transition: transform 500ms;
     }
     
-    .burger-menu {
-       border-bottom: 2px solid #F1CDB3;
-       width: 30px;
-       padding: 4px 0;
-    }
-
     .main-dog {
         height: 271px;
         width: 260px;
     }
-
+    
     .main-img {
         justify-content: center;
     }
-
+    
     .main-text {
         text-align: center;
         margin: 0 10px;
     }
-
+    
     .section-1-flex {
         margin-left: 0;
         margin-right: 0;
@@ -262,5 +250,64 @@ a {
         font-size: 33px;
         text-align: center;
     }
+    
+    .header {
+        position: relative;
+    }
+    
+   .body.open {
+        overflow: hidden;
+    }
+
+    .header-burger.open {
+        transform: rotate(90deg);
+        transition: transform 500ms;
+    }
+
+    .header-background {
+        /* opacity: 0; */
+        /* background-color: rgba(0, 0, 0, 0); */
+        transition: background-color 1s;
+    }
+    
+    .header-background.open {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.5;
+        transition: background-color 1s, opacity 1s;
+    }
+    
+    .header-nav {
+        height: 100vh;
+        position: absolute;
+        right: -320px;
+        top: 0px;
+        font-size: 32px;
+        margin-right: 0;
+        width: 320px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #292929;
+        z-index: 2;
+        transition: transform 500ms;
+    }
+    
+    .header-nav-about {
+        margin-bottom: 25px;
+    }
+
+    .header-nav-a {
+        padding-bottom: 25px ;
+    }
+
+    .header-nav.open{
+        transform: translateX(-100%);
+        visibility: visible;
+        transition: transform 500ms;
+    }
+
 }
 

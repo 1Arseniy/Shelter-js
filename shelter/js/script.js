@@ -1,19 +1,7 @@
- const headerBurger = document.getElementsByClassName('header-burger')[0];
- const headerNav = document.getElementsByClassName('header-nav')[0,1,2,3];
-
-//  document.headerBurger.style.color = 'blue';
- 
-//  headerBurger.style.right = '320px';
- 
- headerBurger.addEventListener('click', function() {
-
-    const headerBurgerRight = window.getComputedStyle(headerNav).right;
-    
-    if (headerBurgerRight.right === '0px') {
-        return headerBurgerRight.right = '320px';
-    }  else  {
-        return headerBurgerRight.right = '0px';
-    }
-});
-
-
+      document.getElementById('header-burger').addEventListener('click', function() {
+         document.querySelector('.header-burger').classList.toggle('open')
+         document.querySelector('.header-nav').classList.toggle('open')
+         document.querySelector('.header').classList.toggle('open')
+         document.querySelector('.header-background').classList.toggle('open')
+         document.querySelector('.body').classList.toggle('open')
+    })
