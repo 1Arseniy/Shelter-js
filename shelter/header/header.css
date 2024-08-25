@@ -265,18 +265,16 @@ a {
     }
 
     .header-background {
-        /* opacity: 0; */
-        /* background-color: rgba(0, 0, 0, 0); */
-        transition: background-color 1s;
-    }
-    
-    .header-background.open {
         position: absolute;
-        height: 100%;
+        height: 100vh;
         width: 100%;
+        opacity: 0;
+        transition: opacity .5s, background-color .5s;
+    }
+   
+    .header-background.open {
         background-color: black;
         opacity: 0.5;
-        transition: background-color 1s, opacity 1s;
     }
     
     .header-nav {
@@ -308,6 +306,12 @@ a {
         visibility: visible;
         transition: transform 500ms;
     }
+
+  /*   .header-nav.open {
+        display: none;
+        transition: transform 500ms;
+    }
+ */
 
 }
 
