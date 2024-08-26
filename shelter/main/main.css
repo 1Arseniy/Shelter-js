@@ -54,6 +54,7 @@
 .section-3 {
     background: #F6F6F6;
     grid-area: section-3;
+    position: relative;
 }
 
 .main-section-3-flex {
@@ -127,6 +128,15 @@
     flex-direction: column;
     justify-content: space-around;
     transition: 200ms;
+}
+
+.modale-window {
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   position: relative;
+   display: flex;
+   z-index: 2;
 }
 
 .main-block:hover {
