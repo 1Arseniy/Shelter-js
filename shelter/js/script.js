@@ -66,14 +66,9 @@
         }
       })
       
-     
-      
-
- 
-
-    
-/* 
-    document.getElementById('jennifer').addEventListener('click', function(){
+      //  const popapOpen = document.querySelectorAll('.main-block');
+       const modaleWindow = document.querySelector('.modale-window');
    
+    document.getElementById('main-block').addEventListener('click', function() {
+      modaleWindow.classList.toggle('active')
     })
- */
