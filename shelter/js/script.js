@@ -32,7 +32,7 @@
     const headerNavA = document.querySelectorAll('.header-nav-a');
 
       function removeClass() {
-        if (headerNav.classList.contains('open'))
+      if (headerNav.classList.contains('open'))
           headerNav.classList.remove('open');
   
       if (headerBurger.classList.contains('open'))
@@ -66,9 +66,34 @@
         }
       })
       
-      //  const popapOpen = document.querySelectorAll('.main-block');
-       const modaleWindow = document.querySelector('.modale-window');
+       const popapClick = document.querySelectorAll('.main-block');
+       const modaleWindow = document.querySelector('.popap-body');
+       const modaleButton = document.querySelector('.modale-button');
+       const main = document.querySelectorAll('main');
+
    
-    document.getElementById('main-block').addEventListener('click', function() {
-      modaleWindow.classList.toggle('active')
-    })
+        popapClick.forEach(function(popap) {
+          popap.addEventListener('click', function() {
+           modaleWindow.classList.toggle('active')
+           body.classList.toggle('active')
+          });
+      });
+      
+        modaleButton.addEventListener('click', function(){
+          if (modaleWindow.classList.contains('active')) {
+             modaleWindow.classList.remove('active');
+          }
+    
+          if (body.classList.contains('active')) {
+              body.classList.remove('active');
+          }
+      })
+
+/*     main.forEach(function(click) {
+      click.addEventListener('click', function(){
+       if (modaleWindow.classList.contains('active')) {
+           modaleWindow.classList.remove('active');
+           body.classList.remove('active');
+       }
+      });
+    }); */
