@@ -131,19 +131,37 @@
 }
 
 .popap-body {
+    display: none;
+    opacity: 0;
+}
+
+.popap-body.active {
+    opacity: 0;
     width: 100%;
     height: 100%;
     position: fixed;
-    display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
-    display: none;
+    transition: opacity 500ms;
+    display: flex;
 }
 
-.popap-body.active {
-    display: flex;
+.popap-body.opacity {
+    transition: opacity 500ms;
+    opacity: 1;
+ 
+}
+
+@keyframes revers-opacity  {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .body.active {
@@ -164,7 +182,6 @@
 }
 
 .modale-window {
-    border: 1px solid red;
     margin: 100px;
     border-radius: 9px;
     height: max-content;
@@ -176,7 +193,6 @@
 .popap-block {
    height: auto;
    width: auto;
-   /* border: 1px solid black; */
 }
 
 .popap-img-dog { 

@@ -2,7 +2,7 @@
       const headerNav =  document.querySelector('.header-nav');
       const headerBackground =  document.querySelector('.header-background');
       const body =  document.querySelector('.body');
-      
+
      headerBurger.addEventListener('click', function() {
          headerBurger.classList.toggle('open')
          headerNav.classList.toggle('open')
@@ -75,6 +75,8 @@
         popapClick.forEach(function(popap) {
           popap.addEventListener('click', function() {
            modaleWindow.classList.toggle('active')
+           setTimeout(() => modaleWindow.classList.toggle('opacity'),0);
+         //   modaleWindow.classList.toggle('opacity')
            body.classList.toggle('active')
            popapBackground.classList.toggle('active')
           })
@@ -89,21 +91,23 @@
       })
     }) */
         modaleButton.addEventListener('click', function(){
-          if (modaleWindow.classList.contains('active')) {
-             modaleWindow.classList.remove('active');
-          }
-    
-          if (body.classList.contains('active')) {
-              body.classList.remove('active');
-          }  
-          if (popapBackground.classList.contains('active')) {
-            popapBackground.classList.remove('active');
-         }
-      })
-
-      popapBackground.addEventListener('click', function(){
-        if (modaleWindow.classList.contains('active')) {
-          modaleWindow.classList.remove('active');
+           if (modaleWindow.classList.contains('active')) {
+               modaleWindow.classList.remove('opacity');
+              setTimeout(() => modaleWindow.classList.remove('active'),500);
+            }
+            
+            if (body.classList.contains('active')) {
+               body.classList.remove('active');
+            }  
+            if (popapBackground.classList.contains('active')) {
+               popapBackground.classList.remove('active');
+            }
+         })
+         
+       popapBackground.addEventListener('click', function(){
+            if (modaleWindow.classList.contains('active')) {
+               modaleWindow.classList.remove('opacity');
+               setTimeout(() => modaleWindow.classList.remove('active'), 500);
        }
  
        if (body.classList.contains('active')) {
