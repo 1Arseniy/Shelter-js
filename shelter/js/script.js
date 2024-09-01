@@ -1,3 +1,18 @@
+      /*  import pets from './pets.json';
+       console.log(pets);
+ */
+     /*   fetch('./pets.json')
+       .then(response => {
+           if (!response.ok) {
+               throw new Error('Network response was not ok');
+           }
+           return response.json();
+       })
+       .then(pets => {
+           console.log(pets[2]);
+       })
+       .catch(error => console.error('Error loading pets:', error)); */
+
       const headerBurger = document.querySelector('.header-burger');
       const headerNav =  document.querySelector('.header-nav');
       const headerBackground =  document.querySelector('.header-background');
@@ -70,26 +85,16 @@
        const modaleWindow = document.querySelector('.popap-body');
        const modaleButton = document.querySelector('.modale-button');
        const popapBackground = document.querySelector('.popap-background');
-
    
         popapClick.forEach(function(popap) {
           popap.addEventListener('click', function() {
            modaleWindow.classList.toggle('active')
            setTimeout(() => modaleWindow.classList.toggle('opacity'),0);
-         //   modaleWindow.classList.toggle('opacity')
            body.classList.toggle('active')
            popapBackground.classList.toggle('active')
           })
       })
       
-  /*    popapClick.forEach(function(click) {
-      click.addEventListener('click', function() {
-       popapBackground.forEach(function(pop){
-          pop.classList.toggle('active')
-       })
-        popapBackground.classList.toggle('active')
-      })
-    }) */
         modaleButton.addEventListener('click', function(){
            if (modaleWindow.classList.contains('active')) {
                modaleWindow.classList.remove('opacity');

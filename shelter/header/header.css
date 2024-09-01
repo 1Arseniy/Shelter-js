@@ -177,8 +177,8 @@ a {
       }
    
       .main-text {
-       align-self: flex-end;
-       margin-right: 25px;
+       align-self: center;
+       text-align: center;
       }
   
       
