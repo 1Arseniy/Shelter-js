@@ -83,11 +83,35 @@
     justify-content: space-around;
 }
 
+.carousel-wrapper {
+    width: 100%;
+    
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-around;
+    /* overflow: hidden; */
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+    /* width: 100%; */
+    width: 950px;
+    overflow: hidden;
+}
+
+
 .main-block {
     background-color: #FAFAFA;
     height: 435px;
     width: 270px;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 200ms;
 }
 
 .main-block:hover .button-learn {
@@ -121,13 +145,6 @@
 .button-learn:hover {
     background-color: #FDDCC4;
     transition: background-color 200ms ease-in-out
-}
-
-.main-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: 200ms;
 }
 
 .popap-body {
@@ -553,6 +570,7 @@
     .popap-text {
         height: 350px;
         width: 240px;
+        margin-bottom: 10px;
     }
 
     .popap-text-2 {

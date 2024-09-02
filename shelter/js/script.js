@@ -1,7 +1,7 @@
-      /*  import pets from './pets.json';
-       console.log(pets);
- */
-     /*   fetch('./pets.json')
+     /*   import pets from './pets.json' assert { type: 'json'};
+       console.log(pets); */
+ /* 
+       fetch('')
        .then(response => {
            if (!response.ok) {
                throw new Error('Network response was not ok');
@@ -12,6 +12,22 @@
            console.log(pets[2]);
        })
        .catch(error => console.error('Error loading pets:', error)); */
+
+      const pet = 
+      {
+        "name": "Katrine",
+        "img": "../../assets/images/katrine.png",
+        "type": "Cat",
+        "breed": "British Shorthair",
+        "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
+        "age": "6 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+      }; 
+
+      const reversJSON =  JSON.stringify(pet);
+      console.log(reversJSON);
 
       const headerBurger = document.querySelector('.header-burger');
       const headerNav =  document.querySelector('.header-nav');
