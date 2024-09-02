@@ -20,3 +20,9 @@ a {
     "main"
     "footer";
 }
+
+.body-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}

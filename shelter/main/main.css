@@ -54,6 +54,7 @@
 .section-3 {
     background: #F6F6F6;
     grid-area: section-3;
+    position: relative;
 }
 
 .main-section-3-flex {
@@ -82,11 +83,35 @@
     justify-content: space-around;
 }
 
+.carousel-wrapper {
+    width: 100%;
+    
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-around;
+    /* overflow: hidden; */
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+    /* width: 100%; */
+    width: 950px;
+    overflow: hidden;
+}
+
+
 .main-block {
     background-color: #FAFAFA;
     height: 435px;
     width: 270px;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 200ms;
 }
 
 .main-block:hover .button-learn {
@@ -122,11 +147,133 @@
     transition: background-color 200ms ease-in-out
 }
 
-.main-block {
+.popap-body {
+    display: none;
+    opacity: 0;
+}
+
+.popap-body.active {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: opacity 500ms;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: 200ms;
+}
+
+.popap-body.opacity {
+    transition: opacity 500ms;
+    opacity: 1;
+ 
+}
+
+@keyframes revers-opacity  {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.body.active {
+    overflow: hidden;
+}
+
+.popap-background {
+    border: 1px solid black;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+}
+
+.popap-background.active {
+    opacity: 0.5;
+    background-color: black;
+}
+
+.modale-window {
+    margin: 100px;
+    border-radius: 9px;
+    height: max-content;
+    background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+}
+
+.popap-block {
+   height: auto;
+   width: auto;
+}
+
+.popap-img-dog { 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}
+
+.popap-img-2 {
+    height: 350px;
+    width: 350px;
+    margin-bottom: 70px;
+}
+
+.popap-text {
+    height: 450px;
+    padding: 25px;
+    width: 400px;
+    font-family: Georgia;
+    letter-spacing: 1px;
+}
+
+.popap-text-2 {
+    margin-top: 40px
+}
+
+.title-child-1 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.title-child {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.li-child::marker {
+    color: #F1CDB3;
+    font-size: 20px;
+}
+
+.span-child {
+    font-weight: 600;
+}
+
+.modale-button {
+   position: absolute;
+   top: -55px;
+   right: -55px;
+   margin: 0 10px;
+}
+
+.popap-img {
+    cursor: pointer;
+    border: 2px solid #FDDCC4;
+    border-radius: 100px;
+    padding: 20px 19px;
+    transition: background-color 300ms ease-in;
+}
+
+.popap-img:hover {
+    background-color: #FDDCC4;
 }
 
 .main-block:hover {
@@ -393,9 +540,59 @@
     justify-content: space-between;
    }
 
+   .popap-img-dog { 
+    width: 330px;
+    height: 350px;
+   }
+
+  .popap-img-2 {
+    height: 250px;
+    width: 250px;
+    margin: 0;
+   }
+
+   .popap-text {
+    height: 350px;
+    width: 280px;
+   }
+
+    .popap-text-2 {
+     margin: 0;
+   }
+
+   h1 {
+    margin: 0;
+   }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
+    
+    .popap-text {
+        height: 350px;
+        width: 240px;
+        margin-bottom: 10px;
+    }
+
+    .popap-text-2 {
+        margin: 0;
+      }
+ 
+    h1 {
+        margin: 0;
+    }
+ 
+    .modale-window {
+        margin: 0;
+    }
+ 
+    .popap-title {
+        text-align: center;
+    }
+
+    .modale-button {
+        top: -60px;
+        right: -20px;
+    }
 
     .img-png {
         padding: 0 30px 0 30px;
@@ -530,5 +727,9 @@
 
    .block-5-text {
     margin: 0 10px;
+   }
+
+   .popap-img-dog {
+    display: none;
    }
 }

@@ -6,22 +6,25 @@
     <link rel="stylesheet" href="./style.css">
     <link type="Image/x-icon" href="./favicon/favicon_(1).ico" rel="icon">
     <script src="./index.js"></script>
+    <script type="module" src="./js/script.js"></script>
     <title>Shelter</title>
 </head>
 <body class="body">
+  <div class="body-wrapper">
     <header class="header">
+      <div class="header-background" id="background"></div>
       <div class="header-flex">
        <div class="header-logo">
          <a href="#" class="header-logo-a"><h1 class="header-logo-1">Cozy House</h1></a>
          <div class="header-logo-2">Shelter for pets in Boston</div>
        </div>
-       <div class="header-burger">
+       <div class="header-burger" id="header-burger">
            <span class="burger-menu"></span>
            <span class="burger-menu"></span>
            <span class="burger-menu"></span>
        </div>
-       <nav class="header-nav">
-        <a href="#" class="header-nav-about">About the shelter</a>
+       <nav class="header-nav" id="header-nav">
+        <a href="#" class="header-nav-about header-nav-revers">About the shelter</a>
         <a href="./our-pets/pets.html" class="header-nav-a">Our pets</a>
         <a href="#help" class="header-nav-a">Help the shelter</a>
         <a href="#footer" class="header-nav-a">Contacts</a>
@@ -80,26 +83,83 @@
                 <span class="main-arrow-3">
                   <img src="./pictures/Arrow-main.svg" alt="arrow" class="arrow-img">
                 </span>
-                 <div class="main-block">
-                    <img src="./pictures/pets-katrine-main.png" alt="cat">
-                    <div class="main-word">Katrine</div>
-                   <div class="main-button-2">
-                     <button class="button-learn">Learn more</button>
-                   </div>
-                 </div>
-                 <div class="main-block main-block-jennifer">
-                    <img src="./pictures/pets-jennifer-main.png" alt="dog">
-                    <div class="main-word">Jennifer</div>
-                   <div class="main-button-2">
-                     <button class="button-learn">Learn more</button>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                      <div class="item">
+                         <div class="main-block" id="main-block">
+                            <img src="./pictures/pets-katrine-main.png" alt="cat">
+                            <div class="main-word">Katrine</div>
+                           <div class="main-button-2">
+                             <button class="button-learn">Learn more</button>
+                           </div>
+                         </div>
+                         <div class="main-block main-block-jennifer">
+                            <img src="./pictures/pets-jennifer-main.png" alt="dog">
+                            <div class="main-word">Jennifer</div>
+                           <div class="main-button-2">
+                             <button class="button-learn">Learn more</button>
+                           </div>
+                         </div>
+                         <div class="main-block main-block-woody">
+                            <img src="./pictures/pets-woody-main.png" alt="dog">
+                            <div class="main-word">Woody</div>
+                           <div class="main-button-2">
+                             <button class="button-learn">Learn more</button>
+                         </div>
+                      </div>
+                      <div class="item">
+                          <div class="main-block main-block-sophia">
+                            <div class="main-block-img">
+                             <img src="./pictures/sophia-main.png" alt="dog">
+                            </div>
+                             <div class="main-word">Sophia</div>
+                             <div class="main-button-2">
+                                 <button class="button-learn">Learn more</button>
+                             </div>
+                          </div>
+                          <div class="main-blocks-2 main-block-timmy">
+                            <div class="main-block">
+                               <img src="./pictures/pets-timmy-main.png" alt="cat" class="">
+                               <div class="main-word">Timmy </div>
+                               <div class="main-button-2">
+                                   <button class="button-learn">Learn more</button>
+                               </div>
+                          </div>
+                          <div class="main-block main-block-charly">
+                            <img src="./pictures/pets-charly-main.png" alt="dog" class="">
+                            <div class="main-word">Charly</div>
+                            <div class="main-button-2">
+                                <button class="button-learn">Learn more</button>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="item">
+                             <div class="main-block main-scarlett">
+                               <img src="./pictures/pets-scarlet-main.png" alt="dog" class="">
+                               <div class="main-word">Scarlett</div>
+                               <div class="main-button-2">
+                                   <button class="button-learn">Learn more</button>
+                               </div>
+                            </div>
+                            <div class="main-block main-freddie">
+                              <div class="main-block-img">
+                               <img src="./pictures/pets-cat-main.png" alt="dog">
+                              </div>
+                               <div class="main-word">Freddie</div>
+                               <div class="main-button-2">
+                                   <button class="button-learn">Learn more</button>
+                               </div>
+                            </div>
+                            <div class="main-block" id="main-block">
+                              <img src="./pictures/pets-katrine-main.png" alt="cat">
+                              <div class="main-word">Katrine</div>
+                             <div class="main-button-2">
+                               <button class="button-learn">Learn more</button>
+                             </div>
+                           </div>
+                      </div>
+                    </div>
                   </div>
-                 </div>
-                 <div class="main-block main-block-woody">
-                    <img src="./pictures/pets-woody-main.png" alt="dog">
-                    <div class="main-word">Woody</div>
-                   <div class="main-button-2">
-                     <button class="button-learn">Learn more</button>
-                   </div>
                 </div>
                 <span class="main-arrow-2">
                   <img src="./pictures/Arrow-main-2.svg" alt="arrow" class="arrow-img">
@@ -119,7 +179,36 @@
                      </div>
                  </div>
             </div>
-        </div>
+            <div class="popap-body">
+              <div class="popap-background" id="popap-background"></div>
+                <div class='modale-window'>
+                  <div class="popap-img-dog popap-block"><img src="./pictures/pets-charly-main.png" alt="dog" class="popap-img-2"></div>
+                  <div class="popap-text popap-block">
+                    <div class="popap-text-2">
+                     <div class="popap-title">
+                          <div class="title-child-1">Jennifer</div>
+                          <p class="title-child">Dog - Labrador</p>
+                     </div>
+                     <div>
+                      Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. 
+                      This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                     </div>
+                     <div>
+                        <ul class="ul-wrapper">
+                          <li class="li-child"><span class="span-child">Age:</span> 2 months</li>
+                          <li class="li-child"><span class="span-child">Inoculations:</span> none</li>
+                          <li class="li-child"><span class="span-child">Diseases:</span> none</li>
+                          <li class="li-child"><span class="span-child">Parasites:</span> none</li>
+                        </ul>
+                     </div>
+                    </div>
+                  </div>
+                   <div class="modale-button"> 
+                       <img src="./pictures/Vector-popap.svg" class="popap-img" alt="png">
+                   </div>
+                </div>
+            </div>
+          </div>
       <div class="section-4" id="help">
        <div class="section-4-flex">
         <div class="main-title-4">
@@ -207,5 +296,6 @@
          </div>
       </div>
     </footer>
+  </div>
 </body>
 </html>
