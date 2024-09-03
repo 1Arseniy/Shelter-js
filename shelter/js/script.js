@@ -139,3 +139,17 @@
           popapBackground.classList.remove('active');
        }
     })
+ 
+    const mainBlock = document.querySelectorAll('.main-block');
+    const buttonLeft = document.querySelector('.button-left');
+    const buttonRight = document.querySelector('.button-right');
+
+    // buttonRight.addEventListener('click', () => {
+       function getRandom() {
+        mainBlock.forEach(function(pets){
+        pets 
+        })
+      }
+      
+   /*   }) */
+ 

@@ -84,22 +84,20 @@
 }
 
 .carousel-wrapper {
-    width: 100%;
-    
+  /*   width: 100%; */
+    margin: 0 20px 0 20px;
+    width: 910px;
+    overflow: hidden;
 }
 
 .carousel {
-    display: flex;
-    justify-content: space-around;
-    /* overflow: hidden; */
+  position: relative;
+  /* left: -910px */
 }
 
 .item {
     display: flex;
     justify-content: space-around;
-    /* width: 100%; */
-    width: 950px;
-    overflow: hidden;
 }
 
 
@@ -112,6 +110,7 @@
     flex-direction: column;
     justify-content: space-around;
     transition: 200ms;
+    margin: 20px 50px 50px 0;
 }
 
 .main-block:hover .button-learn {
