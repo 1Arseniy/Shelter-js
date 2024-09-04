@@ -140,16 +140,12 @@
        }
     })
  
-    const mainBlock = document.querySelectorAll('.main-block');
+   //  const mainBlock = document.querySelectorAll('.main-block');
     const buttonLeft = document.querySelector('.button-left');
     const buttonRight = document.querySelector('.button-right');
+    const carousel = document.querySelector('.carousel')
 
-    // buttonRight.addEventListener('click', () => {
-       function getRandom() {
-        mainBlock.forEach(function(pets){
-        pets 
-        })
-      }
-      
-   /*   }) */
+    buttonLeft.addEventListener('click', function(){
+       carousel.classList.toggle('active')
+    })     
  
