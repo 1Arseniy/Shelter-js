@@ -94,7 +94,7 @@
   left: -910px;
 }
 
-@keyframes right {
+@keyframes left {
     from {
         left: -980px;
     }
@@ -104,9 +104,15 @@
     }
 }
 
+/* @keyframes right {
+    from {
+        right: ;
+    }
+} */
+
 .carousel.active {
-    animation-name: right;
-    animation-duration: 2s;
+    animation-name: left;
+    animation-duration: 1s;
 }
 
 
