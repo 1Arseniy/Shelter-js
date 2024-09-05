@@ -126,9 +126,9 @@
          })
          
        popapBackground.addEventListener('click', function(){
-            if (modaleWindow.classList.contains('active')) {
-               modaleWindow.classList.remove('opacity');
-               setTimeout(() => modaleWindow.classList.remove('active'), 500);
+       if (modaleWindow.classList.contains('active')) {
+          modaleWindow.classList.remove('opacity');
+          setTimeout(() => modaleWindow.classList.remove('active'), 500);
        }
  
        if (body.classList.contains('active')) {
@@ -140,12 +140,28 @@
        }
     })
  
-   //  const mainBlock = document.querySelectorAll('.main-block');
     const buttonLeft = document.querySelector('.button-left');
     const buttonRight = document.querySelector('.button-right');
     const carousel = document.querySelector('.carousel')
 
-    buttonLeft.addEventListener('click', function(){
-       carousel.classList.toggle('active')
-    })     
+ /*    const removeEvent = () => {
+      carousel.classList.add('active');
+      setTimeout(() => carousel.classList.remove('active'), 2000);
+       buttonLeft.removeEventListener('click', removeEvent);
+    }
+    
+    buttonLeft.addEventListener('click', removeEvent);
+   
+    carousel.addEventListener('animationend', () => {
+       carousel.classList.remove('active');
+    }) */
+
+    buttonLeft.addEventListener('click', () => {
+      carousel.classList.add('active')
+      setTimeout(() => carousel.classList.remove('active'), 1000);
+    });
+    
+    
+    
+
  
