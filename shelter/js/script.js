@@ -156,12 +156,14 @@
        carousel.classList.remove('active');
     }) */
 
-    buttonLeft.addEventListener('click', () => {
+    buttonRight.addEventListener('click', () => {
+      carousel.classList.add('active')
+    })
+    
+  /*   buttonRight.addEventListener('click', () => {
       carousel.classList.add('active')
       setTimeout(() => carousel.classList.remove('active'), 1000);
-    });
-    
-    
+    }) */
     
 
  
