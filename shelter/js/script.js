@@ -26,8 +26,23 @@
         "parasites": ["none"]
       }; 
 
-      const reversJSON =  JSON.stringify(pet);
-      console.log(reversJSON);
+     /*  const reversJSON =  JSON.stringify(pet);
+      console.log(reversJSON); */
+
+     /*  function showPopup(pet) {
+         document.getElementById('petName').innerText = pet.name;
+         document.getElementById('petImage').src = pet.img;
+         document.getElementById('petType').innerText = pet.type;
+         document.getElementById('petBreed').innerText = pet.breed;
+         document.getElementById('petDescription').innerText = pet.description;
+         document.getElementById('petAge').innerText = pet.age;
+         document.getElementById('petInoculations').innerText = pet.inoculations.join(', ');
+         document.getElementById('petDiseases').innerText = pet.diseases.join(', ');
+         document.getElementById('petParasites').innerText = pet.parasites.join(', ');
+
+         popup.style.display = 'block';
+         overlay.style.display = 'block';
+     } */
 
       const headerBurger = document.querySelector('.header-burger');
       const headerNav =  document.querySelector('.header-nav');
@@ -141,12 +156,12 @@
     })
  
     const buttonLeft = document.querySelector('.button-left');
-    const buttonRight = document.querySelector('.button-right');
-    const carousel = document.querySelector('.carousel')
-
- /*    const removeEvent = () => {
+    const buttonRight = document.getElementById('button-right');
+    const carousel = document.querySelector('.carousel');
+    let index = 0;
+   //  let index = 0;
+   /*  const removeEvent = () => {
       carousel.classList.add('active');
-      setTimeout(() => carousel.classList.remove('active'), 2000);
        buttonLeft.removeEventListener('click', removeEvent);
     }
     
@@ -155,15 +170,20 @@
     carousel.addEventListener('animationend', () => {
        carousel.classList.remove('active');
     }) */
-
-    buttonRight.addEventListener('click', () => {
-      carousel.classList.add('active')
-    })
+    function updateCarousel() {
+      carousel.style.transform = 'translateX(-${index * 100}%)';
+   }
     
-  /*   buttonRight.addEventListener('click', () => {
-      carousel.classList.add('active')
-      setTimeout(() => carousel.classList.remove('active'), 1000);
-    }) */
+    buttonRight.addEventListener('click', () => {
+      // carousel.classList.add('active')
+      index++;
+      if (index => popapClick.length) {
+         index = 0;
+      }
+
+      updateCarousel();
+
+    })
     
 
  
