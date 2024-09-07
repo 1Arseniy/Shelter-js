@@ -1,5 +1,5 @@
-     /*   import pets from './pets.json' assert { type: 'json'};
-       console.log(pets); */
+   //   import pets from './pets.json';
+   //     console.log(pets);
  /* 
        fetch('')
        .then(response => {
@@ -13,36 +13,35 @@
        })
        .catch(error => console.error('Error loading pets:', error)); */
 
-      const pet = 
-      {
-        "name": "Katrine",
-        "img": "../../assets/images/katrine.png",
-        "type": "Cat",
-        "breed": "British Shorthair",
-        "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-        "age": "6 months",
-        "inoculations": ["panleukopenia"],
-        "diseases": ["none"],
-        "parasites": ["none"]
-      }; 
+      // const pet = 
+      // {
+      //   "name": "Katrine",
+      //   "img": "./pictures/katrine.png",
+      //   "type": "Cat",
+      //   "breed": "British Shorthair",
+      //   "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
+      //   "age": "6 months",
+      //   "inoculations": ["panleukopenia"],
+      //   "diseases": ["none"],
+      //   "parasites": ["none"]
+      // }; 
 
-     /*  const reversJSON =  JSON.stringify(pet);
-      console.log(reversJSON); */
-
-     /*  function showPopup(pet) {
-         document.getElementById('petName').innerText = pet.name;
-         document.getElementById('petImage').src = pet.img;
-         document.getElementById('petType').innerText = pet.type;
-         document.getElementById('petBreed').innerText = pet.breed;
-         document.getElementById('petDescription').innerText = pet.description;
-         document.getElementById('petAge').innerText = pet.age;
-         document.getElementById('petInoculations').innerText = pet.inoculations.join(', ');
-         document.getElementById('petDiseases').innerText = pet.diseases.join(', ');
-         document.getElementById('petParasites').innerText = pet.parasites.join(', ');
-
-         popup.style.display = 'block';
-         overlay.style.display = 'block';
-     } */
+      
+      function showPopup(el) {
+         console.log(el)
+        document.getElementById('name').innerText = 'gbhbhbh';
+      //   document.getElementById('image').src = pet.img;
+      //   document.getElementById('type').innerText = pet.type;
+      //   document.getElementById('breed').innerText = pet.breed;
+      //   document.getElementById('description').innerText = pet.description;
+      //   document.getElementById('age').innerText = pet.age;
+      //   document.getElementById('inoculations').innerText = pet.inoculations.join(', ');
+      //   document.getElementById('diseases').innerText = pet.diseases.join(', ');
+      //   document.getElementById('parasites').innerText = pet.parasites.join(', ');
+      }
+      /*  const reversJSON =  JSON.stringify(pet);
+       console.log(reversJSON); */
+      
 
       const headerBurger = document.querySelector('.header-burger');
       const headerNav =  document.querySelector('.header-nav');
@@ -112,20 +111,22 @@
         }
       })
       
-       const popapClick = document.querySelectorAll('.main-block');
+       const mainBlock = document.querySelectorAll('.main-block');
        const modaleWindow = document.querySelector('.popap-body');
        const modaleButton = document.querySelector('.modale-button');
        const popapBackground = document.querySelector('.popap-background');
    
-        popapClick.forEach(function(popap) {
-          popap.addEventListener('click', function() {
+
+        mainBlock.forEach(function(el) {
+          el.addEventListener('click', function() {
            modaleWindow.classList.toggle('active')
            setTimeout(() => modaleWindow.classList.toggle('opacity'),0);
            body.classList.toggle('active')
            popapBackground.classList.toggle('active')
+           showPopup(el);
           })
       })
-      
+
         modaleButton.addEventListener('click', function(){
            if (modaleWindow.classList.contains('active')) {
                modaleWindow.classList.remove('opacity');
@@ -155,35 +156,26 @@
        }
     })
  
-    const buttonLeft = document.querySelector('.button-left');
-    const buttonRight = document.getElementById('button-right');
+    const buttonLeft = document.querySelectorAll('.button-left');
+    const buttonRight = document.querySelectorAll('.button-right');
     const carousel = document.querySelector('.carousel');
     let index = 0;
-   //  let index = 0;
-   /*  const removeEvent = () => {
-      carousel.classList.add('active');
-       buttonLeft.removeEventListener('click', removeEvent);
-    }
-    
-    buttonLeft.addEventListener('click', removeEvent);
-   
-    carousel.addEventListener('animationend', () => {
-       carousel.classList.remove('active');
-    }) */
-    function updateCarousel() {
-      carousel.style.transform = 'translateX(-${index * 100}%)';
-   }
-    
-    buttonRight.addEventListener('click', () => {
-      // carousel.classList.add('active')
-      index++;
-      if (index => popapClick.length) {
-         index = 0;
-      }
 
-      updateCarousel();
-
+    buttonRight.forEach((el) => {
+       el.addEventListener('click', () => {
+       index++;
+       carousel.classList.add('active')
+       carousel.style.transform = `translateX(-${index * 100}%)`;
+     })
     })
-    
-
+       
+     buttonLeft.forEach((el) => {
+     el.addEventListener('click', () => {
+       index--;
+       carousel.classList.add('active')
+       carousel.style.transform = `translateX(-${index * 100}%)`;
+     })
+    })
+     
+ 
  

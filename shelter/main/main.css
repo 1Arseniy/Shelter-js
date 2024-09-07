@@ -89,7 +89,7 @@
     overflow: hidden;
 }
 
-@keyframes left {
+/* @keyframes left {
     from {
         transform: translateX(0);
     }
@@ -98,12 +98,13 @@
       transform: translateX(-100%);
     }
 }
-
+ */
 
 .carousel.active {
-    animation-name: left;
+/*     animation-name: left;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+    transition: transform 1s;
 }
 
 .item {
@@ -509,7 +510,7 @@
     }
  */
     .carousel-wrapper {
-        width: 590px;
+        width: 585px;
         margin: 0;
     }
 
