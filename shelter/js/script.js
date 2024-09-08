@@ -1,22 +1,10 @@
-     /*   import pets from './pets.json' assert { type: 'json'};
-       console.log(pets); */
- /* 
-       fetch('')
-       .then(response => {
-           if (!response.ok) {
-               throw new Error('Network response was not ok');
-           }
-           return response.json();
-       })
-       .then(pets => {
-           console.log(pets[2]);
-       })
-       .catch(error => console.error('Error loading pets:', error)); */
-
+   //   import pets from './pets.json';
+   //     console.log(pets);
+/* 
       const pet = 
       {
         "name": "Katrine",
-        "img": "../../assets/images/katrine.png",
+        "img": "./pictures/katrine.png",
         "type": "Cat",
         "breed": "British Shorthair",
         "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
@@ -26,8 +14,18 @@
         "parasites": ["none"]
       }; 
 
-      const reversJSON =  JSON.stringify(pet);
-      console.log(reversJSON);
+      function showPopup(el) {
+         console.log(el)
+        document.getElementById('name').innerText = pet.name;
+        document.getElementById('image').src = pet.img;
+        document.getElementById('type').innerText = pet.type;
+        document.getElementById('breed').innerText = pet.breed;
+        document.getElementById('description').innerText = pet.description;
+        document.getElementById('age').innerText = pet.age;
+        document.getElementById('inoculations').innerText = pet.inoculations.join(', ');
+        document.getElementById('diseases').innerText = pet.diseases.join(', ');
+        document.getElementById('parasites').innerText = pet.parasites.join(', ');
+      }  */
 
       const headerBurger = document.querySelector('.header-burger');
       const headerNav =  document.querySelector('.header-nav');
@@ -97,20 +95,22 @@
         }
       })
       
-       const popapClick = document.querySelectorAll('.main-block');
+       const mainBlock = document.querySelectorAll('.main-block');
        const modaleWindow = document.querySelector('.popap-body');
        const modaleButton = document.querySelector('.modale-button');
        const popapBackground = document.querySelector('.popap-background');
    
-        popapClick.forEach(function(popap) {
-          popap.addEventListener('click', function() {
+
+        mainBlock.forEach(function(el) {
+          el.addEventListener('click', function() {
            modaleWindow.classList.toggle('active')
            setTimeout(() => modaleWindow.classList.toggle('opacity'),0);
            body.classList.toggle('active')
            popapBackground.classList.toggle('active')
+         //   showPopup(el);
           })
       })
-      
+
         modaleButton.addEventListener('click', function(){
            if (modaleWindow.classList.contains('active')) {
                modaleWindow.classList.remove('opacity');
@@ -140,30 +140,33 @@
        }
     })
  
-    const buttonLeft = document.querySelector('.button-left');
-    const buttonRight = document.querySelector('.button-right');
-    const carousel = document.querySelector('.carousel')
+    const buttonLeft = document.querySelectorAll('.button-left');
+    const buttonRight = document.querySelectorAll('.button-right');
+    const carousel = document.querySelector('.carousel');
+    const item = document.querySelectorAll('.item');
+    let index = 0;
 
- /*    const removeEvent = () => {
-      carousel.classList.add('active');
-      setTimeout(() => carousel.classList.remove('active'), 2000);
-       buttonLeft.removeEventListener('click', removeEvent);
-    }
-    
-    buttonLeft.addEventListener('click', removeEvent);
-   
-    carousel.addEventListener('animationend', () => {
-       carousel.classList.remove('active');
-    }) */
-
-    buttonRight.addEventListener('click', () => {
-      carousel.classList.add('active')
+    buttonRight.forEach((el) => {
+       el.addEventListener('click', () => {
+       index++;
+       if (index >= item.length){
+          index = 0;
+         }
+         carousel.style.transform = `translateX(-${index * 100}%)`;
+         carousel.style.transition = `transform 1s`; 
+     })
     })
-    
-  /*   buttonRight.addEventListener('click', () => {
-      carousel.classList.add('active')
-      setTimeout(() => carousel.classList.remove('active'), 1000);
-    }) */
-    
-
+       
+     buttonLeft.forEach((el) => {
+     el.addEventListener('click', () => {
+       index--;
+       if (index < 0) {
+          index = item.length - 1;
+      }
+       carousel.style.transform = `translateX(-${index * 100}%)`;
+       carousel.style.transition = `transform 1s`;
+     })
+    })
+     
+ 
  
