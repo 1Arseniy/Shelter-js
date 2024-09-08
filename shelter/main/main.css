@@ -89,21 +89,7 @@
     overflow: hidden;
 }
 
-/* @keyframes left {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-100%);
-    }
-}
- */
-
 .carousel.active {
-/*     animation-name: left;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; */
     transition: transform 1s;
 }
 
@@ -114,8 +100,6 @@
 
 
 .main-block {
-  /*   flex: 0 0 calc(100% / 3); 
-    box-sizing: border-box; */
     background-color: #FAFAFA;
     height: 435px;
     width: 270px;
