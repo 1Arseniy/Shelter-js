@@ -153,8 +153,7 @@
           index = 0;
          }
          carousel.style.transform = `translateX(-${index * 100}%)`;
-         //  carousel.style.transition = `transform 1s`; 
-           carousel.classList.add('active')
+         carousel.style.transition = `transform 1s`; 
      })
     })
        
@@ -163,10 +162,9 @@
        index--;
        if (index < 0) {
           index = item.length - 1;
-         //   carousel.classList.add('active')
       }
        carousel.style.transform = `translateX(-${index * 100}%)`;
-      //  carousel.style.transition = `transform 1s`;
+       carousel.style.transition = `transform 1s`;
      })
     })
      
