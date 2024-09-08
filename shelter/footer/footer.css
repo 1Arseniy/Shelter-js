@@ -8,7 +8,6 @@
 }
 
 .footer-flex {
-   margin-top: 40px;
    margin-left: 10px;
    margin-right: 30px;
    display: flex;
@@ -54,6 +53,7 @@
 .footer-block-2 {
     display: flex;
     justify-content: flex-end;
+    margin-top: 40px;
 }
 
 @media (max-width: 1279px) and (min-width: 767px) {
@@ -64,11 +64,17 @@
   
       .footer-block {
           margin-right: 50px;
+          margin-top: 10px;
       }
   
+      .footer-block-1 {
+        margin-top: 10px;
+      }
+
       .footer-block-2 {
           justify-content: center;
           width: 100%;
+          margin-top:0;
       }
   
       .footer-block-title {
@@ -95,6 +101,7 @@
     .footer-block-2 {
         justify-content: center;
         width: 100%;
+        margin-top: 0;
     }
 
     .footer-block-title {
@@ -118,5 +125,6 @@
     .footer-flex {
         margin-left: 0;
         margin-right: 0;
+        padding-top: 20px;
     }
 }
