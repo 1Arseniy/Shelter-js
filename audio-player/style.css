@@ -1,0 +1,18 @@
+.body {
+   margin: 0;
+}
+
+.audio-player-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-player {
+    border-radius: 10px;
+    margin: 20px;
+    height: 400px;
+    width: 350px;
+    background-color: #3d3e42;
+}
