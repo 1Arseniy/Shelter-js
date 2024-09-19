@@ -1,22 +1,29 @@
 // const audio = document.querySelector('.audio');
-const playPauseButton = document.querySelector('.play-pause-button');
+const playMusic = document.querySelector('.play-music');
 let isPlay = false;
 
-const audio = new Audio();
+const audio = new Audio(
+  './audio/Gorillaz - Feel Good Inc.mp3'
+);
 
-if (isPlay == false) {
-  // let isPlay = true;
-  function playAudio() {
-    audio.src = './audio/Coldplay feat. Beyonce - Hymn For The Weekend.mp3'
-    audio.currrntTime = 0;
+function playPause() {
+  if(isPlay) {
+    audio.pause();
+    isPlay = false;
+  } else {
+    audio.currentTime = 0;
     audio.play();
+    isPlay = true;
   }
-} else if (!isPlay) {
-    // let isPlay= false;
-    function pauseAudio() {
-      audio.pause();
-    }
 }
-  playPauseButton.addEventListener('click', playAudio);
-  playPauseButton.addEventListener('click', pauseAudio);
-  
+playMusic.addEventListener('click', playPause);
+
+
+const playButton = document.querySelector('.play-button');
+// const pauseButton = document.querySelector('.pause-button');
+
+function reversButton() {
+  playButton.classList.toggle('pause-buton');
+}
+
+playButton.addEventListener('click',reversButton);

@@ -39,6 +39,24 @@
   grid-area: nav;
 }
 
-.play-pause-button {
+.play-button {
   height: 50px;
+  width: 50px;
+  background-image: url(./icon/play-button.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
+
+.pause-button{
+   background-image: url(./icon/pause-button.png);
+   height: 50px;
+   width: 50px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   display: inline-block;
+}
+
+/* .play-button.pause-button {
+  background-image: url(./icon/pause-button.png);
+} */
