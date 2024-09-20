@@ -36,27 +36,53 @@
 
 
 .block-2 {
-  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
 }
 
-.play-button {
-  height: 50px;
-  width: 50px;
+.music-play {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
   background-image: url(./icon/play-button.png);
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 
-.pause-button{
+.music-play.active{
    background-image: url(./icon/pause-button.png);
-   height: 50px;
-   width: 50px;
-   background-size: contain;
-   background-repeat: no-repeat;
-   display: inline-block;
 }
 
-/* .play-button.pause-button {
-  background-image: url(./icon/pause-button.png);
-} */
+.back-music {
+  cursor: pointer;
+  height: 35px;
+}
+
+.next-music {
+  cursor: pointer;
+  height: 35px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.link {
+  align-self: center;
+  margin: 0 20px 0 20px;
+  font-size: 25px;
+  text-decoration: none;
+  color: #3d3e42;
+}
+
+.numbers {
+  align-self: center;
+  font-size: 25px;
+}
