@@ -10,7 +10,7 @@ const songs = [
 ]
 
 const audio = new Audio(songs[index]);
-  
+
 function playPause() {
   if(isPlay) {
     audio.pause();
@@ -22,7 +22,6 @@ function playPause() {
   }
 }
 
-
 musicPlay.addEventListener('click', () => {
   musicPlay.classList.toggle('active');
 })
@@ -30,16 +29,36 @@ musicPlay.addEventListener('click', () => {
 const backMusic = document.querySelector('.back-music');
 const nextMusic = document.querySelector('.next-music');
 
-/* function nextSong() {
-  index = (index + 1 );
+
+  function nextSong() {
+    musicPlay.classList.add('active');
+    index++
+    audio.src = songs[index];
+    audio.play();
+    audio.currentTime = 0;
+    isPlay = true;
+   /*  if(songs[3]) {
+      index = 0;
+    } */
+  }
+  
+
+
+/* function backSong() {
+  musicPlay.classList.add('active');
+  index--
   index.src = songs[index];
   audio.play();
   audio.currentTime = 0;
   isPlay = true;
-} */
-
+  if(songs[0]) {
+    index = 2;
+  }
+}
+ */
 musicPlay.addEventListener('click', playPause);
-// nextMusic.addEventListener('click', nextSong);
+nextMusic.addEventListener('click', nextSong);
+// backMusic.addEventListener('click', backSong);
 
 
 /* 
