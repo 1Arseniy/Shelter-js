@@ -1,7 +1,8 @@
 // const audio = document.querySelector('.audio');
 const musicPlay = document.querySelector('.music-play');
-let isPlay = false;
-let index = 0;
+let isPlay;
+let index;
+let audio
 
 const songs = [
   './audio/Gorillaz - Feel Good Inc.mp3',
@@ -9,9 +10,13 @@ const songs = [
   './audio/Coldplay feat. Beyonce - Hymn For The Weekend.mp3'
 ]
 
-const audio = new Audio(songs[index]);
-  
+if(index === undefined) {
+  index = 0
+  audio = new Audio(songs[index]);
+}
+
 function playPause() {
+
   if(isPlay) {
     audio.pause();
     isPlay = false;
@@ -22,7 +27,6 @@ function playPause() {
   }
 }
 
-
 musicPlay.addEventListener('click', () => {
   musicPlay.classList.toggle('active');
 })
@@ -30,16 +34,36 @@ musicPlay.addEventListener('click', () => {
 const backMusic = document.querySelector('.back-music');
 const nextMusic = document.querySelector('.next-music');
 
-/* function nextSong() {
-  index = (index + 1 );
-  index.src = songs[index];
+
+  function nextSong() {
+    musicPlay.classList.add('active');
+    if (index < songs.length - 1) {
+      index++;
+    } else {
+      index = 0;
+    }
+    audio.src = songs[index];
+    audio.play();
+    audio.currentTime = 0;
+    isPlay = true;
+  }
+  
+function backSong() {
+  musicPlay.classList.add('active');
+  if(index == 0) {
+    index = songs.length -1;
+  } else {
+    index--;
+  }
+  audio.src = songs[index];
   audio.play();
   audio.currentTime = 0;
   isPlay = true;
-} */
+}
 
 musicPlay.addEventListener('click', playPause);
-// nextMusic.addEventListener('click', nextSong);
+nextMusic.addEventListener('click', nextSong);
+backMusic.addEventListener('click', backSong);
 
 
 /* 
