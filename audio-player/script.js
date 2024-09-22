@@ -4,6 +4,12 @@ let isPlay;
 let index;
 let audio
 
+const pictures = [
+  './pictures/gorillaz.jpg',
+  './pictures/bacground-coldplay.jpg',
+  './pictures/robin-sugar.jpg'
+]
+
 const songs = [
   './audio/Gorillaz - Feel Good Inc.mp3',
   './audio/Robin Schulz feat. Francesco Yates – Sugar.mp3',
@@ -60,6 +66,13 @@ function backSong() {
   audio.currentTime = 0;
   isPlay = true;
 }
+
+const input = document.querySelector('.input')
+
+audio.addEventListener('timeupdate', () => {
+  input.value = audio.currentTime;
+  input.max = audio.duration;
+})
 
 musicPlay.addEventListener('click', playPause);
 nextMusic.addEventListener('click', nextSong);
