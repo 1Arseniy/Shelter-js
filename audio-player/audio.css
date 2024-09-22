@@ -23,6 +23,7 @@
 }
 
 .block-1 {
+  padding: 10px;
   grid-area: picture;
   display: flex;
   align-items: center;
@@ -40,6 +41,7 @@
   display: flex;
   justify-content: space-around;
   width: 70%;
+  margin-bottom: 10px;
 }
 
 .music-play {
@@ -80,10 +82,19 @@
   margin: 0 20px 0 20px;
   font-size: 25px;
   text-decoration: none;
-  color: #3d3e42;
+  color:antiquewhite;
 }
 
 .numbers {
   align-self: center;
   font-size: 25px;
+  color:antiquewhite;
+}
+
+.input {
+  width: 200px;
+}
+
+input[type="range"]{
+  cursor: pointer;
 }
