@@ -79,8 +79,10 @@
 
 .pictures {
   /* width: 100%; */
-  width: 300px;
+  /* width: 300px; */
   margin: 20px;
+  /* background-image: url('https://images.unsplash.com/photo-1503919483171-9ffc1debc390?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxODE4ODF8MHwxfHNlYXJjaHwxfHxzcHJpbmd8ZW58MHwwfHx8MTcyNzM0NTk2OXww&ixlib=rb-4.0.3&q=80&w=400');
+  background-repeat: no-repeat; */
 }
 
 .footer {
