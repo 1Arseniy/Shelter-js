@@ -14,6 +14,7 @@
  */
 .canvas {
     border: 1px solid red;
+    background-color: #7661cb;
     width: 500px;
     height: 500px;
 }
