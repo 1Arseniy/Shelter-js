@@ -1,5 +1,4 @@
 .body {
-    min-width: 600px;
     background-color: burlywood;
     height: 100vh;
     margin: 0;
@@ -9,12 +8,20 @@
 }
 
 /* .body-wrapper {
-    object-fit: contain;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
 }
  */
-.canvas {
-    border: 1px solid red;
-    background-color: #7661cb;
-    width: 500px;
-    height: 500px;
+
+.line {
+    /* border: 1px solid rebeccapurple; */
+    width: 100px;
+}
+
+.space {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-bottom: 0px;
 }
