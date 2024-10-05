@@ -7,21 +7,15 @@
     justify-content: center;
 }
 
-/* .body-wrapper {
-    display: flex;
-    height: 100%;
-    align-items: flex-end;
-}
- */
-
 .line {
-    /* border: 1px solid rebeccapurple; */
-    width: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 20vmin);
+    grid-template-rows: repeat(3, 20vmin);
+    gap: 3vmin;
+    background-color: #ad8c35;
 }
 
-.space {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    border-bottom: 0px;
+.cell {
+    position: relative;
+    background-color: burlywood;
 }
