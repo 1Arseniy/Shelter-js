@@ -1,19 +1,17 @@
 const cell = document.querySelectorAll('.cell'); 
+const png = document.querySelector('img');
 let step = 0;
 
 const icons = [
-   './icon/circle.png',
-   './icon/cross.png'
-]
+    './icon/circle.png',
+    './icon/cross-1.png'
+];
 
 cell.forEach((el) => {
-    el.addEventListinier('click', () => {
-        icons.length[0];
+    el.addEventListener('click', function() {
+           if(cell !== null) {
+              png.src = icons[1]
+           }
+         
     })
 })
-
-/* function tap() {
-    cell.src = icons[0]
-}
-
-cell.addEventListinier('click', tap) */
