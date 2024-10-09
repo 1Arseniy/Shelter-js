@@ -33,6 +33,14 @@
     user-select: none;
 }
 
+.cell.active {
+  background-color: aqua;
+  /* background-image: url(./icon/cross-1.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 70%; */
+  /* width: 70%; */
+}
+
 .png {
   width: 70%;
 }
