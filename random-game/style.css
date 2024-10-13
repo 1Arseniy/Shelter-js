@@ -37,15 +37,16 @@
 
 .png {
     width: 70%;
-    /* background-color: aqua; */
-    /* filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%); */
-    /* grayscale(100%); */
+}
+
+.png.filter {
+    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
     /* mix-blend-mode: multiply; */
 }
 
 .finish-window {
     position: relative;
-    background-color: black;
+    background-color: #71472f;
     height: 50vmin;
     width: 66vmin;
     visibility: hidden;
@@ -55,14 +56,14 @@
     justify-content: center;
 }
 
-.text {
-    color: white;
-    font-size: 25px;
-}
-
-.finish-window.active {
+.finish-window.open {
     visibility: visible;
 }
+.text {
+    color: white;
+    font-size: 6vmin;
+}
+
 
 .footer {
     display: flex;
