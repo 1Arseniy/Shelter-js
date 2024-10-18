@@ -41,6 +41,7 @@
 
 .png.filter {
     filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
+    transition: 500ms;
     /* mix-blend-mode: multiply; */
 }
 
@@ -59,6 +60,25 @@
 .finish-window.open {
     visibility: visible;
 }
+
+/* .el0.filter {
+    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
+}
+.el1.filter {
+    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
+}
+.el2.filter {
+    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
+} */
+
+.circle.open{
+    visibility: visible;
+}
+
+.cross.open {
+    visibility: visible;
+}
+
 .text {
     color: white;
     font-size: 6vmin;
