@@ -2,6 +2,7 @@ const cell = document.querySelectorAll(".cell");
 const png = document.querySelectorAll('.png')
 const text = document.querySelector('.text')
 const finishWidow = document.querySelector(".finish-window");
+const playAgain = document.querySelector('.play-again')
 let elemFree = [];
 const icons = ["./icon/circle.png", "./icon/cross-1.png"];
 const win = {
@@ -69,7 +70,7 @@ function validationVictory() {
             png.forEach((el) => {
                 el.classList.add('filter')
             })
-            text.textContent = 'Win Circles'
+            text.textContent = 'Won Circles'
             setTimeout(() => finishWidow.classList.add('open'), 1000)
         } 
         
@@ -80,3 +81,7 @@ cell.forEach((el) => {
     el.addEventListener('click',validationVictory)
 })
 
+playAgain.addEventListener('click', () => {
+    finishWidow.classList.remove('open')
+    location.reload()
+})

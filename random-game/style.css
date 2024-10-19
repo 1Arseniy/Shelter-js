@@ -53,6 +53,7 @@
     visibility: hidden;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -61,29 +62,24 @@
     visibility: visible;
 }
 
-/* .el0.filter {
-    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
-}
-.el1.filter {
-    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
-}
-.el2.filter {
-    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
-} */
-
-.circle.open{
-    visibility: visible;
-}
-
-.cross.open {
-    visibility: visible;
-}
-
 .text {
     color: white;
     font-size: 6vmin;
 }
 
+.play-again {
+   margin: 2vmin;
+   padding: 1vmin 4vmin 1vmin 4vmin;
+   background-color: #ad8c35;
+   border: #ad8c35;
+   cursor: pointer;
+   border-radius: 10px;
+   transition: background-color .3s;
+}
+
+.play-again:hover {
+    background-color: burlywood;
+}
 
 .footer {
     display: flex;
