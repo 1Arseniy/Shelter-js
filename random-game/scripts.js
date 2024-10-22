@@ -57,23 +57,22 @@ function click() {
 click();
 
 function validationVictory() {
-    for(let i =0; i < win.winConbenation.length; i++) { 
+    for(let i = 0; i < win.winConbenation.length; i++) { 
+        const el0 = document.querySelector(`.cell-${win.winConbenation[i][0]}`); 
         const el1 = document.querySelector(`.cell-${win.winConbenation[i][1]}`);
         const el2 = document.querySelector(`.cell-${win.winConbenation[i][2]}`);
-        const el0 = document.querySelector(`.cell-${win.winConbenation[i][0]}`); 
         if(el0.classList.contains('cross') && el1.classList.contains('cross') && el2.classList.contains('cross')){
-                png.forEach((el) => {
-                    el.classList.add('filter')
-                })
-            setTimeout(() => finishWidow.classList.add('open'), 1000)
-        } else if (el0.classList.contains('circle') && el1.classList.contains('circle') && el2.classList.contains('circle')) {
-            png.forEach((el) => {
-                el.classList.add('filter')
-            })
-            text.textContent = 'Won Circles'
-            setTimeout(() => finishWidow.classList.add('open'), 1000)
-        } 
-        
+            el0.children[0].classList.add('filter');
+            el1.children[0].classList.add('filter');
+            el2.children[0].classList.add('filter');
+            setTimeout(() => finishWidow.classList.add('open'), 1000);
+        }else if( el0.classList.contains('circle') && el1.classList.contains('circle') && el2.classList.contains('circle')) {
+            el0.children[0].classList.add('filter');
+            el1.children[0].classList.add('filter');
+            el2.children[0].classList.add('filter');
+            text.textContent = 'Won Circles';
+            setTimeout(() => finishWidow.classList.add('open'), 1000);
+        }
     }
 }
 

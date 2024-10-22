@@ -40,9 +40,9 @@
 }
 
 .png.filter {
-    filter: invert(75%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
+    filter: invert(26%) hue-rotate(0deg) saturate(3) sepia(100%) saturate(200%) grayscale(100%);
     transition: 500ms;
-    /* mix-blend-mode: multiply; */
+    mix-blend-mode: color-burn;
 }
 
 .finish-window {
@@ -65,11 +65,12 @@
 .text {
     color: white;
     font-size: 6vmin;
+    margin-bottom: 5vmin;
 }
 
 .play-again {
    margin: 2vmin;
-   padding: 1vmin 4vmin 1vmin 4vmin;
+   padding: 1.5vmin 4vmin 1.5vmin 4vmin;
    background-color: #ad8c35;
    border: #ad8c35;
    cursor: pointer;
