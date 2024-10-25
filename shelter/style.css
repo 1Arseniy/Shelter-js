@@ -1,14 +1,28 @@
 @import url(./main/main.css);
 @import url(./header/header.css);
+@import url(./footer/footer.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    cursor: pointer;
+}
 
 .body {
-    height: 100vh;
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto auto min-content;
     grid-template-areas: 
     "header"
     "main"
     "footer";
+}
+
+.body-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
