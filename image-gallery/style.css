@@ -1,0 +1,134 @@
+.body {
+    margin: 0;
+    font-family: sans-serif;
+    /*  display: grid;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    background-color: antiquewhite; */
+}
+
+.header {
+    grid-area: header;
+    height: 100px;
+    background-color: #d5a564;
+}
+
+.header-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    margin: 0px 0 0 15px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.form-wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    position: relative;
+}
+
+/* input[type="placeholder"] {
+    appearance: none;
+    color: #605f64 ;
+}
+ */
+.input[type="search"] {
+    appearance: none;
+    border: none;
+    height: 30px;
+    width: 300px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.form-wrapper button {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 30px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.button-img {
+    height: 20px;
+}
+
+.main {
+    height: 100%;
+    background-color: antiquewhite;
+    grid-area: main;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pictures {
+    /* width: 100%; */
+    height: 360px;
+    width: 400px;
+    margin: 20px;
+}
+
+.footer {
+    background-color: #d5a564;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.block {
+    margin: 5px 0 5px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-1 {
+    height: 50px;
+}
+
+.link {
+    margin: 0 20px 15px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.numbers {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 650px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .logo {
+        padding: 10px;
+    }
+}
