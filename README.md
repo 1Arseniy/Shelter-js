@@ -1,6 +1,6 @@
 ## Shelter
 
-<https://1arseniy.github.io/Shelter-js/shelter/>
+<https://rolling-scopes-school.github.io/1arseniy-JSFEPRESCHOOL2024Q2/shelter/>
 
 ## Audio-player
 
